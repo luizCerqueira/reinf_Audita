@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2030infoRecurso
-    {
+    public class R2030infoRecurso : Entidade
+	{
         public int tpRepasse  { get; set; }
 
         public double vlrBruto { get; set; }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2030recursosRec
-    {
+    public class R2030recursosRec : Entidade
+	{
         public string cnpjOrigRecurso { get; set; }
 
         public double vlrTotalRec { get; set; }

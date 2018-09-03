@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2050infoProc
-    {
+    public class R2050infoProc : Entidade
+	{
         public int tpProc { get; set; }
 
         public string nrProc { get; set; }

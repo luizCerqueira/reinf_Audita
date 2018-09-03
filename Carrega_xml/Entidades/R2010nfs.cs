@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2010nfs
-    {
+    public class R2010nfs : Entidade
+	{
         public string serie { get; set; }
 
         public string numDocto { get; set; }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2010infoProcRetPr
-    {
+    public class R2010infoProcRetPr : Entidade
+	{
         public int tpProcRetPrinc { get; set; }
 
         public string nrProcRetPrinc { get; set; }

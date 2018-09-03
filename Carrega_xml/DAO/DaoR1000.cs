@@ -19,6 +19,8 @@ namespace DAO
         {
             try
             {
+				string q = string.Format("{0}", entidade.Id);
+
                 string strQuery = "INSERT INTO[dbo].[R1000]([iniValid],[fimValid],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInscr],[classTrib],[indEscrituracao],[indDesoneracao],[indAcordoIsenMulta],[indSitPJ],[nmCtt],[cpfCtt],[foneFixo],[foneCel],[email],[ideEFR],[cnpjEFR],[operacao],[pai],[tpAtividade],[indObra],[tpServ],[nrCNO],[infoCPRB])";
                 strQuery += string.Format("VALUES ('{0: yyyy-MM-dd}','{1: yyyy-MM-dd}','{2}','{3}',{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}',{19},{20},'{21}','{22}','{23}','{24}','{25}')",
                     entidade.iniValid

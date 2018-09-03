@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R1000softHouse
+    public class R1000softHouse : Entidade
     {
         public string cnpjSoftHouse { get; set; }
 

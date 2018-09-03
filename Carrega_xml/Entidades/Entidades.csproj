@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidade.cs" />
+    <Compile Include="indAcordoIsenMulta.cs" />
+    <Compile Include="indAutoria.cs" />
+    <Compile Include="indDesoneracao.cs" />
+    <Compile Include="indEscrituracao.cs" />
+    <Compile Include="indSitPJ.cs" />
+    <Compile Include="indSusp.cs" />
+    <Compile Include="participante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="R1000.cs" />
     <Compile Include="R1000softHouse.cs" />
