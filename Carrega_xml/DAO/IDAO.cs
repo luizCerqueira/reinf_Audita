@@ -8,7 +8,7 @@ namespace DAO
 {
     public interface IDAO<T> where T: class
     {
-        bool Save(T entidade, string Banco);
+        bool Save(T entidade, string Banco, int Id = 0);
 
         bool Delete(T entidade, string Banco);
 

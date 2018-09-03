@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Reinf xmlns="http://www.reinf.esocial.gov.br/schemas/evtTomadorServicos/v1_03_02">
+  <evtServTom xmlns="http://www.reinf.esocial.gov.br/schemas/evtTomadorServicos/v1_03_02" id="ID1019399790000002018061211364800004">
+    <ideEvento>
+      <indRetif>1</indRetif>
+      <perApur>2018-05</perApur>
+      <tpAmb>1</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>12.1.K</verProc>
+    </ideEvento>
+    <ideContri>
+      <tpInsc>1</tpInsc>
+      <nrInsc>01939979</nrInsc>
+    </ideContri>
+    <infoServTom>
+      <ideEstabObra>
+        <tpInscEstab>1</tpInscEstab>
+        <nrInscEstab>01939979000120</nrInscEstab>
+        <indObra>0</indObra>
+        <idePrestServ>
+          <cnpjPrestador>92753268001003</cnpjPrestador>
+          <vlrTotalBruto>1248,21</vlrTotalBruto>
+          <vlrTotalBaseRet>1248,21</vlrTotalBaseRet>
+          <vlrTotalRetPrinc>137,30</vlrTotalRetPrinc>
+          <vlrTotalRetAdic>0,00</vlrTotalRetAdic>
+          <vlrTotalNRetPrinc>0,00</vlrTotalNRetPrinc>
+          <vlrTotalNRetAdic>0,00</vlrTotalNRetAdic>
+          <indCPRB>0</indCPRB>
+          <nfs>
+            <serie>0</serie>
+            <numDocto>0132295</numDocto>
+            <dtEmissaoNF>2018-05-04</dtEmissaoNF>
+            <vlrBruto>1248,21</vlrBruto>
+            <obs>                                      OUTRAS INFORMA€åES
+
+(1) Esta NFSE foi emitida com respaldo na Lei n§ 14.097/2005 (2) sta NFSE substitui o rps n§ 296796 s‚rie nf emitido em 04.05.18 (3) data de vencimnento do iss desta NFSe: 10.06.2018</obs>
+            <infoTpServ>
+              <tpServico>100000020</tpServico>
+              <vlrBaseRet>1248,21</vlrBaseRet>
+              <vlrRetencao>137,30</vlrRetencao>
+              <vlrRetSub>0,00</vlrRetSub>
+              <vlrNRetPrinc>0,00</vlrNRetPrinc>
+              <vlrServicos15>0,00</vlrServicos15>
+              <vlrServicos20>0,00</vlrServicos20>
+              <vlrServicos25>0,00</vlrServicos25>
+              <vlrAdicional>0,00</vlrAdicional>
+              <vlrNRetAdic>0,00</vlrNRetAdic>
+            </infoTpServ>
+          </nfs>
+        </idePrestServ>
+      </ideEstabObra>
+    </infoServTom>
+  </evtServTom>
+</Reinf>
