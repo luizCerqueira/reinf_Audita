@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R1070 : Entidade
+	class participante : Entidade
 	{
-        //fazer
-    }
+		public string nrInsc { get; set; }
+
+		public string tpInsc{ get; set; }
+	}
 }

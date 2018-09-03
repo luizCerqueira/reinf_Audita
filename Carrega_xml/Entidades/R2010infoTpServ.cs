@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2010infoTpServ
-    {
+    public class R2010infoTpServ : Entidade
+	{
         public string tpServico { get; set; }
 
         public string codAtivEcon { get; set; }

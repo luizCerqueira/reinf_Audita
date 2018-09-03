@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R1070 : Entidade
+	class indAutoria : Entidade
 	{
-        //fazer
-    }
+		public string descricao { get; set; }
+	}
 }

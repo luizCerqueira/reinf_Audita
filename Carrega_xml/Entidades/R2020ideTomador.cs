@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2020ideTomador
-    {
+    public class R2020ideTomador : Entidade
+	{
         public string tpInscTomador { get; set; }
 
         public string nrInscTomador { get; set; }

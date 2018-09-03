@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2020infoProcRetAd
-    {
+    public class R2020infoProcRetAd : Entidade
+	{
         public int tpProcRetAdic { get; set; }
 
         public string nrProcRetAdic { get; set; }

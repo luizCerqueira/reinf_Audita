@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class R2050tipoCom
-    {
+    public class R2050tipoCom : Entidade
+	{
         public int indCom { get; set; }
 
         public int vlrRecBruta { get; set; }
