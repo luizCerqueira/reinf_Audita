@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Reinf xmlns="http://www.reinf.esocial.gov.br/schemas/evtInfoContribuinte/v1_03_02">
+  <evtInfoContri xmlns="http://www.reinf.esocial.gov.br/schemas/evtInfoContribuinte/v1_03_02" id="ID1019399790000002018061211533500000">
+    <ideEvento>
+      <tpAmb>1</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>12.1.K</verProc>
+    </ideEvento>
+    <ideContri>
+      <tpInsc>1</tpInsc>
+      <nrInsc>01939979</nrInsc>
+    </ideContri>
+    <infoContri>
+      <alteracao>
+        <idePeriodo>
+          <iniValid>2018-05</iniValid>
+          <fimValid>2018-05</fimValid>
+        </idePeriodo>
+        <infoCadastro>
+          <classTrib>99</classTrib>
+          <indEscrituracao>1</indEscrituracao>
+          <indDesoneracao>1</indDesoneracao>
+          <indAcordoIsenMulta>0</indAcordoIsenMulta>
+          <indSitPJ>0</indSitPJ>
+          <contato>
+            <nmCtt>ANTONIO AGNALDO ZANDONA</nmCtt>
+            <cpfCtt>06282934885</cpfCtt>
+            <foneFixo>1934297127</foneFixo>
+            <foneCel>1934297127</foneCel>
+            <email>azandona@ngmetalurgica.com.br</email>
+          </contato>
+        </infoCadastro>
+      </alteracao>
+    </infoContri>
+  </evtInfoContri>
+</Reinf>

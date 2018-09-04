@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Reinf xmlns="http://www.reinf.esocial.gov.br/schemas/evtTomadorServicos/v1_03_02">
+  <evtServTom xmlns="http://www.reinf.esocial.gov.br/schemas/evtTomadorServicos/v1_03_02" id="ID1019399790000002018061211364800006">
+    <ideEvento>
+      <indRetif>1</indRetif>
+      <perApur>2018-05</perApur>
+      <tpAmb>1</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>12.1.K</verProc>
+    </ideEvento>
+    <ideContri>
+      <tpInsc>1</tpInsc>
+      <nrInsc>01939979</nrInsc>
+    </ideContri>
+    <infoServTom>
+      <ideEstabObra>
+        <tpInscEstab>1</tpInscEstab>
+        <nrInscEstab>01939979000392</nrInscEstab>
+        <indObra>0</indObra>
+        <idePrestServ>
+          <cnpjPrestador>06209089000187</cnpjPrestador>
+          <vlrTotalBruto>6872,77</vlrTotalBruto>
+          <vlrTotalBaseRet>6872,77</vlrTotalBaseRet>
+          <vlrTotalRetPrinc>240,55</vlrTotalRetPrinc>
+          <vlrTotalRetAdic>0,00</vlrTotalRetAdic>
+          <vlrTotalNRetPrinc>0,00</vlrTotalNRetPrinc>
+          <vlrTotalNRetAdic>0,00</vlrTotalNRetAdic>
+          <indCPRB>1</indCPRB>
+          <nfs>
+            <serie>E</serie>
+            <numDocto>0001821</numDocto>
+            <dtEmissaoNF>2018-05-14</dtEmissaoNF>
+            <vlrBruto>6872,77</vlrBruto>
+            <obs>OUTRAS INFORMA€åES
+Mˆs de Competˆncia:
+Recolhimento: Retido na Fonte
+CNAE: 7112000
+Tributa‡Æo:
+05/2018 Local do Recolhimento: PIRACICABA/SP
+Observa‡äes: VALOR APROXIMADO DOS TRIBUTOS (18,33%) = R$ 1.259,78
+
+FONTE IBPT
+
+RETEN€ÇO DE 3,5% PARA A SEGURID</obs>
+            <infoTpServ>
+              <tpServico>100000003</tpServico>
+              <vlrBaseRet>6872,77</vlrBaseRet>
+              <vlrRetencao>240,55</vlrRetencao>
+              <vlrRetSub>0,00</vlrRetSub>
+              <vlrNRetPrinc>0,00</vlrNRetPrinc>
+              <vlrServicos15>0,00</vlrServicos15>
+              <vlrServicos20>0,00</vlrServicos20>
+              <vlrServicos25>0,00</vlrServicos25>
+              <vlrAdicional>0,00</vlrAdicional>
+              <vlrNRetAdic>0,00</vlrNRetAdic>
+            </infoTpServ>
+          </nfs>
+        </idePrestServ>
+      </ideEstabObra>
+    </infoServTom>
+  </evtServTom>
+</Reinf>

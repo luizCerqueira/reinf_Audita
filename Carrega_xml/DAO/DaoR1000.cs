@@ -15,7 +15,7 @@ namespace DAO
             throw new NotImplementedException();
         }
 
-        public bool Save(R1000 entidade, string Banco)
+        public bool Save(R1000 entidade, string Banco, int Id)
         {
             try
             {
