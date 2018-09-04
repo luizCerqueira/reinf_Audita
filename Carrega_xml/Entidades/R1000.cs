@@ -63,5 +63,7 @@ namespace Entidades
         public int usuario { get; set; }
 
         public int transmitido { get; set; }
+
+        public int Chave { get; set; }
     }
 }

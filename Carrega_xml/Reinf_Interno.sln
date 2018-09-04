@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTeste", "ConsoleTeste\ConsoleTeste.csproj", "{806CDCEB-4617-446A-91DD-F1ECB83C8851}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REINF", "REINF\REINF.csproj", "{7C766BEE-82CC-437F-B613-2AB2FA8510B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{806CDCEB-4617-446A-91DD-F1ECB83C8851}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{806CDCEB-4617-446A-91DD-F1ECB83C8851}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{806CDCEB-4617-446A-91DD-F1ECB83C8851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C766BEE-82CC-437F-B613-2AB2FA8510B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C766BEE-82CC-437F-B613-2AB2FA8510B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C766BEE-82CC-437F-B613-2AB2FA8510B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C766BEE-82CC-437F-B613-2AB2FA8510B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
