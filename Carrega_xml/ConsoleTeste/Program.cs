@@ -7,6 +7,7 @@ using Entidades;
 using DAO;
 using System.Xml.Linq;
 using System.Xml;
+using System.IO;
 
 namespace ConsoleTeste
 {
@@ -16,49 +17,53 @@ namespace ConsoleTeste
         {
             string a = (@"C:\Users\k\Desktop\Luiz\Projetos\Reinf_Xml\testexmls\R-1000-ID1019399790000002018061211533500000.xml");
             R1000 r = new R1000();
+            DaoR1000 dao = new DaoR1000();
             XmlDocument xml = new XmlDocument();
             XmlTextReader x = new XmlTextReader(a);
-
-
+            
+            
             while (x.Read())
             {
                 if (x.NodeType == XmlNodeType.Element && x.Name == "tpAmb")
-                    Console.WriteLine((x.ReadString()));
+                    r.tpAmb = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "procEmi")
-                    Console.WriteLine((x.ReadString()));
+                     r.procEmi  = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "verProc")
-                    Console.WriteLine((x.ReadString()));
+                    r.verProc = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "tpInsc")
-                    Console.WriteLine((x.ReadString()));
+                    r.tpInsc = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "nrInsc")
-                    Console.WriteLine((x.ReadString()));
+                    r.nrInscr = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "iniValid")
-                    Console.WriteLine(Convert.ToDateTime((x.ReadString())));
+                    r.iniValid = Convert.ToDateTime((x.ReadString()));
                 if (x.NodeType == XmlNodeType.Element && x.Name == "fimValid")
-                    Console.WriteLine(Convert.ToDateTime((x.ReadString())));
+                    r.fimValid = Convert.ToDateTime((x.ReadString()));
                 if (x.NodeType == XmlNodeType.Element && x.Name == "classTrib")
-                    Console.WriteLine((x.ReadString()));
+                    r.classTrib = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "indEscrituracao")
-                    Console.WriteLine((x.ReadString()));
+                    r.indEscrituracao = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "indDesoneracao")
-                    Console.WriteLine((x.ReadString()));
+                    r.indDesoneracao = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "indAcordoIsenMulta")
-                    Console.WriteLine((x.ReadString()));
+                    r.indAcordoIsenMulta = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "indSitPJ")
-                    Console.WriteLine((x.ReadString()));
+                    r.indSitPJ = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "nmCtt")
-                    Console.WriteLine((x.ReadString()));
+                    r.nmCtt = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "cpfCtt")
-                    Console.WriteLine((x.ReadString()));
+                    r.cpfCtt = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "foneFixo")
-                    Console.WriteLine((x.ReadString()));
+                    r.foneFixo = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "email")
-                    Console.WriteLine((x.ReadString()));
+                    r.email = x.ReadString();
             }
-
+            
+            dao.Save(r,"NG",0);
+            
             x.Close();
+            
 
-            Console.ReadLine();
+            
 
         }
     }
