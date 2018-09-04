@@ -24,6 +24,7 @@ namespace ConsoleTeste
             
             while (x.Read())
             {
+
                 if (x.NodeType == XmlNodeType.Element && x.Name == "tpAmb")
                     r.tpAmb = x.ReadString();
                 if (x.NodeType == XmlNodeType.Element && x.Name == "procEmi")
@@ -58,7 +59,7 @@ namespace ConsoleTeste
                     r.email = x.ReadString();
             }
             
-            dao.Save(r,"NG",0);
+            //dao.Save(r,"NG",0);
             
             x.Close();
             

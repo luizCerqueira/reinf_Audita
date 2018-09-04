@@ -32,7 +32,6 @@
             this.btnVerifica = new System.Windows.Forms.Button();
             this.lblCarregarXmls = new System.Windows.Forms.RichTextBox();
             this.lblCaminho = new System.Windows.Forms.Label();
-            this.Progresso = new System.Windows.Forms.ProgressBar();
             this.btnCarregar = new System.Windows.Forms.Button();
             this.btnProcura = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -71,14 +70,6 @@
             this.lblCaminho.Size = new System.Drawing.Size(51, 13);
             this.lblCaminho.TabIndex = 4;
             this.lblCaminho.Text = "Caminho:";
-            // 
-            // Progresso
-            // 
-            this.Progresso.Location = new System.Drawing.Point(-1, 303);
-            this.Progresso.Name = "Progresso";
-            this.Progresso.Size = new System.Drawing.Size(516, 12);
-            this.Progresso.TabIndex = 5;
-            this.Progresso.Visible = false;
             // 
             // btnCarregar
             // 
@@ -119,7 +110,6 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnProcura);
             this.Controls.Add(this.btnCarregar);
-            this.Controls.Add(this.Progresso);
             this.Controls.Add(this.lblCaminho);
             this.Controls.Add(this.lblCarregarXmls);
             this.Controls.Add(this.btnVerifica);
@@ -138,7 +128,6 @@
         private System.Windows.Forms.Button btnVerifica;
         private System.Windows.Forms.RichTextBox lblCarregarXmls;
         private System.Windows.Forms.Label lblCaminho;
-        private System.Windows.Forms.ProgressBar Progresso;
         private System.Windows.Forms.Button btnCarregar;
         private System.Windows.Forms.Button btnProcura;
         private System.Windows.Forms.Button btnClear;

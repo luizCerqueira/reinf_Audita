@@ -25,10 +25,8 @@ namespace REINF
         {
             if (verificar)
             {
-                foreach (var item in arquivos)
-                {
-
-                }
+                Carregar_Xml xml = new Carregar_Xml(arquivos);
+                xml.ShowDialog();
             }
             else
             {
