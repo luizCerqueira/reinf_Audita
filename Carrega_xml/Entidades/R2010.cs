@@ -42,9 +42,9 @@ namespace Entidades
 
         public double vlrTotalNRetPrinc { get; set; }
 
-        public double virTotalNRetAdic { get; set; }
+        public double vlrTotalNRetAdic { get; set; }
 
-        public string codAnacont { get; set; }
+        public string codAnaCont { get; set; }
 
         public int indCPRB { get; set; }
 

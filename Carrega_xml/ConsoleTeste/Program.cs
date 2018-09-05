@@ -59,7 +59,7 @@ namespace ConsoleTeste
             }
             
             dao.Save(r,"NG",0);
-            
+			dao.Save(r,"NG", r.Id);
             x.Close();
             
 
