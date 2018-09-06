@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070detCompet : Entidade
+	public class R2070detCompet : Entidade
 	{
 		public int indPerReferencia { get; set; }
 

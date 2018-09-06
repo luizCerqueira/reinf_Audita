@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2060nfs : Entidade
+	public class R2060nfs : Entidade
 	{
 		public string serie { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070ideAdvogado : Entidade
+	public class R2070ideAdvogado : Entidade
 	{
 		public string tpInscAdvogado { get; set; }
 

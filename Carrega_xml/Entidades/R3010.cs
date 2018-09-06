@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R3010 : Entidade
+	public class R3010 : Entidade
 	{
 		public string tpAmb { get; set; }
 

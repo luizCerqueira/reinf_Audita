@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5001RRecRepAD : Entidade
+	public class R5001RRecRepAD : Entidade
 	{
 		public string cnpjAssocDesp { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070infoProcJud : Entidade
+	public class R2070infoProcJud : Entidade
 	{
 		public string nrProcJud { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070infoRRA : Entidade
+	public class R2070infoRRA : Entidade
 	{
 		public int tpProcRRA { get; set; }
 

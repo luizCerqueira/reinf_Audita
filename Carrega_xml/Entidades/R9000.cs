@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R9000 : Entidade
+	public class R9000 : Entidade
 	{
 		public string tpAmb { get; set; }
 

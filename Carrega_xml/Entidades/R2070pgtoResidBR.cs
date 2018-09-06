@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070pgtoResidBR : Entidade
+	public class R2070pgtoResidBR : Entidade
 	{
 		public int tipoPgtoResidBR { get; set; }
 
