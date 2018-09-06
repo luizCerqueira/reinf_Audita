@@ -16,22 +16,28 @@ namespace REINF
     {
         bool verificar = false;
         string[] arquivos;
+        string banco;
 
         public FrmCarregar()
         {
             InitializeComponent();
+            cbDatabase.SelectedIndex = 0;
         }
 
         private void btnCarregar_Click(object sender, EventArgs e)
         {
             if (verificar)
             {
-                FileInfo infoArquivo;
-                CarregarXML xml;
-                foreach (var item in arquivos)
+                if (MessageBox.Show("Verifique as informações e clique em SIM para carregar os dados ","Confirmação de Carregamento",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    infoArquivo = new FileInfo(item);
-                    xml = new CarregarXML(item,infoArquivo.Name);
+                    FileInfo infoArquivo;
+                    CarregarXML xml;
+                    foreach (var item in arquivos)
+                    {
+                        infoArquivo = new FileInfo(item);
+                        banco = cbDatabase.SelectedItem.ToString();
+                        xml = new CarregarXML(item, infoArquivo.Name, banco);
+                    }
                 }
             }
             else
@@ -60,6 +66,7 @@ namespace REINF
                     }
                 }
                 btnVerifica.Enabled = false;
+                btnProcura.Enabled = false;
             }
             
         }
@@ -69,6 +76,7 @@ namespace REINF
             txtCaminho.Clear();
             lblCarregarXmls.Clear();
             btnVerifica.Enabled = true;
+            btnProcura.Enabled = true;
             verificar = false;
         }
 

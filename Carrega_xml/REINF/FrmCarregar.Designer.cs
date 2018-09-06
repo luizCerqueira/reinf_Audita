@@ -35,6 +35,7 @@
             this.btnCarregar = new System.Windows.Forms.Button();
             this.btnProcura = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.cbDatabase = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtCaminho
@@ -101,12 +102,27 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // cbDatabase
+            // 
+            this.cbDatabase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDatabase.FormattingEnabled = true;
+            this.cbDatabase.Items.AddRange(new object[] {
+            "NG",
+            "Ubyfol",
+            "Plascomcor",
+            "Overdril"});
+            this.cbDatabase.Location = new System.Drawing.Point(190, 65);
+            this.cbDatabase.Name = "cbDatabase";
+            this.cbDatabase.Size = new System.Drawing.Size(121, 21);
+            this.cbDatabase.TabIndex = 9;
+            // 
             // FrmCarregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(515, 313);
+            this.Controls.Add(this.cbDatabase);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnProcura);
             this.Controls.Add(this.btnCarregar);
@@ -131,5 +147,6 @@
         private System.Windows.Forms.Button btnCarregar;
         private System.Windows.Forms.Button btnProcura;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ComboBox cbDatabase;
     }
 }

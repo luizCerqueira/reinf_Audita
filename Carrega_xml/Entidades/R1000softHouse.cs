@@ -8,6 +8,8 @@ namespace Entidades
 {
     public class R1000softHouse : Entidade
     {
+        //NÃO É UTILIZADO ESSA CLASSE 
+
         public string cnpjSoftHouse { get; set; }
 
         public string nmRazao { get; set; }
