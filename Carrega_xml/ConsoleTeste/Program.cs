@@ -59,8 +59,13 @@ namespace ConsoleTeste
                     r.email = x.ReadString();
             }
             
+<<<<<<< HEAD
             //dao.Save(r,"NG",0);
             
+=======
+            dao.Save(r,"NG",0);
+			dao.Save(r,"NG", r.Id);
+>>>>>>> f345179fd69028cbd7ad3a2dd64c36fc91888791
             x.Close();
             
 

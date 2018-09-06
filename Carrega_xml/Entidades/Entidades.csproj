@@ -77,6 +77,26 @@
     <Compile Include="R2070ideAdvogado.cs" />
     <Compile Include="R2070ideEstab.cs" />
     <Compile Include="R2070infoProcJud.cs" />
+    <Compile Include="R2070infoResidExt.cs" />
+    <Compile Include="R2070infoRRA.cs" />
+    <Compile Include="R2070pgtoResidBR.cs" />
+    <Compile Include="R2070pgtoResidExt.cs" />
+    <Compile Include="R2070rendIsento.cs" />
+    <Compile Include="R2098.cs" />
+    <Compile Include="R2099.cs" />
+    <Compile Include="R3010.cs" />
+    <Compile Include="R3010boletim.cs" />
+    <Compile Include="R3010ideEstab.cs" />
+    <Compile Include="R3010infoProc.cs" />
+    <Compile Include="R3010outrasReceitas.cs" />
+    <Compile Include="R3010ReceitaIngressos.cs" />
+    <Compile Include="R5001.cs" />
+    <Compile Include="R5001RCPRB.cs" />
+    <Compile Include="R5001regOcorrs.cs" />
+    <Compile Include="R5001RPrest.cs" />
+    <Compile Include="R5001RRecRepAD.cs" />
+    <Compile Include="R5001RTom.cs" />
+    <Compile Include="R9000.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
