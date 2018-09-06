@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2060infoProc : Entidade
+	class R2060nfs : Entidade
 	{
-		public int tpProc { get; set; }
+		public string serie { get; set; }
 
-		public string nrProc { get; set; }
+		public string numDocto { get; set; }
 
-		public string codSusp { get; set; }
+		public DateTime dtEmissaoNF { get; set; }
 
-		public double vlrCPRBSusp { get; set; }
+		public double vlrBruto { get; set; }
 
 		public int R2060tipoCod { get; set; }
 	}

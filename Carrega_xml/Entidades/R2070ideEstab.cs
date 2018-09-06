@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class indAutoria : Entidade
+	class R2070ideEstab : Entidade
 	{
-		public string descricao { get; set; }
+		public string tpInsc { get; set; }
+
+		public string nrInsc { get; set; }
+
+		public int R2070 { get; set; }
 	}
 }

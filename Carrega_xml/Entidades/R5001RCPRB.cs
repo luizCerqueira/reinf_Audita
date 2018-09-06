@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2060infoProc : Entidade
+	class R5001RCPRB : Entidade
 	{
-		public int tpProc { get; set; }
+		public string codRec { get; set; }
 
-		public string nrProc { get; set; }
-
-		public string codSusp { get; set; }
+		public double vlrCPApurTotal { get; set; }
 
 		public double vlrCPRBSusp { get; set; }
 
-		public int R2060tipoCod { get; set; }
+		public string R5001 { get; set; }
 	}
 }
