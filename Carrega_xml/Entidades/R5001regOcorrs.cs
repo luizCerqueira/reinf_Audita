@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5001regOcorrs : Entidade
+	public class R5001regOcorrs : Entidade
 	{
 		public string tpOcorr { get; set; }
 

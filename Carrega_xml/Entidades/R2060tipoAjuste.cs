@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2060tipoAjuste : Entidade
+	public class R2060tipoAjuste : Entidade
 	{
 		public int tpAjuste { get; set; }
 

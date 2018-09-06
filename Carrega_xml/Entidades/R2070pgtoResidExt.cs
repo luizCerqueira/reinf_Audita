@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070pgtoResidExt : Entidade
+	public class R2070pgtoResidExt : Entidade
 	{
 		public DateTime dtPagto { get; set; }
 

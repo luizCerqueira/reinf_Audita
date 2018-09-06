@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5001RCPRB : Entidade
+	public class R5001RCPRB : Entidade
 	{
 		public string codRec { get; set; }
 

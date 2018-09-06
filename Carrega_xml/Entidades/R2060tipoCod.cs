@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2060tipoCod : Entidade
+	public class R2060tipoCod : Entidade
 	{
 		public string codAtivEcon { get; set; }
 

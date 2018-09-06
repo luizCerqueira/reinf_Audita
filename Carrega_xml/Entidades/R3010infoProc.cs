@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R3010infoProc : Entidade
+	public class R3010infoProc : Entidade
 	{
 		public string vlrCPSusp { get; set; }
 

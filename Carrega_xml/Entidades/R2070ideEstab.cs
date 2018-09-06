@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2070ideEstab : Entidade
+	public class R2070ideEstab : Entidade
 	{
 		public string tpInsc { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R3010outrasReceitas : Entidade
+	public class R3010outrasReceitas : Entidade
 	{
 		public string tpReceita { get; set; }
 

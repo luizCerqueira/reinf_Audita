@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R2060infoProc : Entidade
+	public class R2060infoProc : Entidade
 	{
 		public int tpProc { get; set; }
 
