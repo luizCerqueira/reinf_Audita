@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace REINF
 {
     public partial class FrmCarregar : Form
@@ -25,8 +26,13 @@ namespace REINF
         {
             if (verificar)
             {
-                Carregar_Xml xml = new Carregar_Xml(arquivos);
-                xml.ShowDialog();
+                FileInfo infoArquivo;
+                CarregarXML xml;
+                foreach (var item in arquivos)
+                {
+                    infoArquivo = new FileInfo(item);
+                    xml = new CarregarXML(item,infoArquivo.Name);
+                }
             }
             else
             {

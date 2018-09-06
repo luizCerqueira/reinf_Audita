@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarregarXML\CarregarXML.cs" />
+    <Compile Include="CarregarXML\R1000XML.cs" />
     <Compile Include="Carregar_Xml.cs">
       <SubType>Form</SubType>
     </Compile>

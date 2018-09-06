@@ -13,15 +13,13 @@ namespace REINF
     public partial class Carregar_Xml : Form
     {
 
-        public Carregar_Xml(string[] arquivos)
+        public Carregar_Xml()
         {
             InitializeComponent();
-            carregar_Xmls_database(arquivos);
+            
         }
 
-        protected static void carregar_Xmls_database(string[] arq)
-        {
-
-        }
+        
+        
     }
 }
