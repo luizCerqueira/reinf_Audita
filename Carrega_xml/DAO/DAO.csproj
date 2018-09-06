@@ -48,6 +48,12 @@
     <Compile Include="DaoR2040.cs" />
     <Compile Include="DaoR2050.cs" />
     <Compile Include="DaoR2060.cs" />
+    <Compile Include="DaoR2070.cs" />
+    <Compile Include="DaoR2098.cs" />
+    <Compile Include="DaoR2099.cs" />
+    <Compile Include="DaoR3010.cs" />
+    <Compile Include="DaoR5001.cs" />
+    <Compile Include="DaoR9000.cs" />
     <Compile Include="IDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
