@@ -45,6 +45,7 @@
     <Compile Include="R1000.cs" />
     <Compile Include="R1000softHouse.cs" />
     <Compile Include="R1070.cs" />
+    <Compile Include="R1070infoSusp.cs" />
     <Compile Include="R2010.cs" />
     <Compile Include="R2010infoProcRetAd.cs" />
     <Compile Include="R2010infoProcRetPr.cs" />

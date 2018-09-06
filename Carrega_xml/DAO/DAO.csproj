@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="ConexaoBD.cs" />
     <Compile Include="DaoR1000.cs" />
+    <Compile Include="DaoR1070.cs" />
+    <Compile Include="DaoR1070infoSusp.cs" />
     <Compile Include="DaoR2010.cs" />
     <Compile Include="DaoR2020.cs" />
     <Compile Include="DaoR2030.cs" />
