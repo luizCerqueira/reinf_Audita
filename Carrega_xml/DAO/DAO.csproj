@@ -45,6 +45,9 @@
     <Compile Include="DaoR1070.cs" />
     <Compile Include="DaoR1070infoSusp.cs" />
     <Compile Include="DaoR2010.cs" />
+    <Compile Include="DaoR2010infoProcRetAd.cs" />
+    <Compile Include="DaoR2010infoProcRetPr.cs" />
+    <Compile Include="DaoR2010infoTpServ.cs" />
     <Compile Include="DaoR2020.cs" />
     <Compile Include="DaoR2030.cs" />
     <Compile Include="DaoR2040.cs" />

@@ -27,7 +27,7 @@ namespace DAO
 					entidade.dtDecisao,
 					entidade.indDeposito,
 					Id,
-					entidade.Chave
+					Chave
 					);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
