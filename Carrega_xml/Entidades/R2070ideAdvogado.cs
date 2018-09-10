@@ -12,7 +12,7 @@ namespace Entidades
 
 		public string nrInscAdvogado { get; set; }
 
-		public float vlrAdvogado { get; set; }
+		public double vlrAdvogado { get; set; }
 
 		public int infoProcesso { get; set; }
 	}

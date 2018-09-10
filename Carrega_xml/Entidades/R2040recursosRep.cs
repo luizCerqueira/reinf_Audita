@@ -12,7 +12,7 @@ namespace Entidades
 
         public double vlrTotalRep { get; set; }
 
-        public double vlrTotalRec { get; set; }
+        public double vlrTotalRet { get; set; }
 
         public double vlrTotalNRet { get; set; }
 

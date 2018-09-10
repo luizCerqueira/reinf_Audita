@@ -14,7 +14,7 @@ namespace Entidades
 
         public double vlrRetApur { get; set; }
 
-        public int R2040recursoRep { get; set; }
+        public int R2040recursosRep { get; set; }
 
         public string descRecurso { get; set; }
 
