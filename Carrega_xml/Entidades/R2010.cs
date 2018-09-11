@@ -8,21 +8,21 @@ namespace Entidades
 {
     public class R2010 : Entidade
 	{
-        public string tpAmb { get; set; }
-
-        public string procEmi { get; set; }
-
-        public string verProc { get; set; }
-
         public string indRetif { get; set; }
 
         public string nrRecibo { get; set; }
 
         public DateTime perApur { get; set; }
 
-        public string tpInscContri { get; set; }
+        public string tpAmb { get; set; }
 
-        public string nrInscContri { get; set; }
+        public string procEmi { get; set; }
+
+        public string verProc { get; set; }
+
+        public string tpInsc { get; set; } //ALTERADO
+
+        public string nrInsc { get; set; } //ALTERADO
 
         public string tpInscEstab { get; set; }
 
@@ -44,7 +44,7 @@ namespace Entidades
 
         public double vlrTotalNRetAdic { get; set; }
 
-        public string codAnaCont { get; set; }
+        //public string codAnaCont { get; set; }
 
         public int indCPRB { get; set; }
 

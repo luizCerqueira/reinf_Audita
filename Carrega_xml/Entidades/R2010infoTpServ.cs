@@ -10,14 +10,6 @@ namespace Entidades
 	{
         public string tpServico { get; set; }
 
-        public string codAtivEcon { get; set; }
-
-        public double vlrMatEquip { get; set; }
-
-        public double vlrDedAlim { get; set; }
-
-        public double vlrDedTrans { get; set; }
-
         public double vlrBaseRet { get; set; }
 
         public double vlrRetencao { get; set; }
@@ -37,6 +29,14 @@ namespace Entidades
         public double vlrNRetAdic { get; set; }
 
         public int R2010nfs { get; set; }
+        
+        //public string codAtivEcon { get; set; }
 
+        //public double vlrMatEquip { get; set; }
+
+        //public double vlrDedAlim { get; set; }
+
+        //public double vlrDedTrans { get; set; }
+        
     }
 }

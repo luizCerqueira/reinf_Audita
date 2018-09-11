@@ -8,11 +8,6 @@ namespace Entidades
 {
     public class R2020 : Entidade
 	{
-        public string tpAmb { get; set; }
-
-        public string procEmi { get; set; }
-
-        public string verProc { get; set; }
 
         public string indRetif { get; set; }
 
@@ -20,9 +15,15 @@ namespace Entidades
 
         public DateTime perApur { get; set; }
 
-        public string tpInscContri { get; set; }
+        public string tpAmb { get; set; }
 
-        public string nrInscContri { get; set; }
+        public string procEmi { get; set; }
+
+        public string verProc { get; set; }
+
+        public string tpInsc { get; set; } //ALTERADO
+
+        public string nrInsc { get; set; } //ALTERADO
 
         public string tpInscEstabPrest { get; set; }
 

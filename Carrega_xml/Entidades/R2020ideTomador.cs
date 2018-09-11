@@ -25,8 +25,8 @@ namespace Entidades
         public double vlrTotalNRetPrinc { get; set; }
 
         public double vlrTotalNRetAdic { get; set; }
-
-        public string codAnaCont { get; set; }
+        
+        //public string codAnaCont { get; set; }
 
         public int R2020 { get; set; }
     }
