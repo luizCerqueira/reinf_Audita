@@ -15,9 +15,7 @@ namespace REINF
         public int CarregarXML(string caminho, string database)
         {
             R1000 r1000 = new R1000();
-            R1000softHouse r1000softHouse = new R1000softHouse();
             DaoR1000 daoR1000 = new DaoR1000();
-          //DaoR1000softHouse daoR1000softHouse = new DaoR1000softHouse();
             XmlDocument xml = new XmlDocument();
             XmlTextReader x = new XmlTextReader(caminho);
 
@@ -43,9 +41,8 @@ namespace REINF
             }
 
 
-            //daoR1000.Save(r1000, database, 0, "");
-            //daoR1000softHouse.Save(r1000softHouse, database, r1000.Id, "")
-
+            bool verdade = daoR1000.Save(r1000, database, 0, r1000.Chave);
+            
             return r1000.Id;
         }
     }
