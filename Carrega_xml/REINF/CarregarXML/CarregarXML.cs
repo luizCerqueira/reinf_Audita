@@ -22,10 +22,14 @@ namespace REINF
                 R1000XML R1000 = new R1000XML();
                 IDR1000 = R1000.CarregarXML(arq, banco);
             }
-            else if (name.Trim().Replace("-", "").Contains("R2010"))
+			else if (name.Trim().Replace("-", "").Contains("R1070"))
+			{
+				R1070XML R1070 = new R1070XML();
+				R1070.CarregarXML(arq, banco, IDR1000);
+			}
+			else if (name.Trim().Replace("-", "").Contains("R2010"))
             {
-                R1070XML R1070 = new R1070XML();
-                R1070.CarregarXML(arq, banco, IDR1000);
+                
             }
             else if (name.Trim().Replace("-", "").Contains("R2020"))
             {

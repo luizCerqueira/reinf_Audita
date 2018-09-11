@@ -27,7 +27,7 @@ namespace REINF
                 {
                     switch (x.Name)
                     {
-                        case "evtInfoContri":
+                        case "evtTabProcesso":
                             x.MoveToAttribute("id");
                             r1070.Chave = x.Value.ToString();
                             infoSusp.Chave = x.Value.ToString();
