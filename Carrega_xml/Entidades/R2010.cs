@@ -20,9 +20,9 @@ namespace Entidades
 
         public string verProc { get; set; }
 
-        public string tpInsc { get; set; } //ALTERADO
+        public string tpInsc { get; set; }
 
-        public string nrInsc { get; set; } //ALTERADO
+        public string nrInsc { get; set; }
 
         public string tpInscEstab { get; set; }
 
@@ -44,10 +44,8 @@ namespace Entidades
 
         public double vlrTotalNRetAdic { get; set; }
 
-        //public string codAnaCont { get; set; }
-
         public int indCPRB { get; set; }
 
-        public int R1000 { get; set; } //Estrangeira
+        public int R1000 { get; set; } 
     }
 }

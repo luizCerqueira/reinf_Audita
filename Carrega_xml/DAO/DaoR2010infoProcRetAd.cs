@@ -18,16 +18,17 @@ namespace DAO
         {
             try
             {
-                string strQuery = "INSERT INTO [dbo].[R2010infoProcRetAd]([tpProcRetAdic],[nrProcRetAdic],[codSuspAdic],[valorAdic],[R2010],[Chave]) ";
-                strQuery += string.Format("VALUES ({0},'{1}','{2}',{3},{4},'{5}')",
-                    entidade.tpProcRetAdic,
-                    entidade.nrProcRetAdic,
-                    entidade.codSuspAdic,
-                    entidade.valorAdic,
-                    Id,
-                    Chave);
+				string strQuery = "INSERT INTO [dbo].[R2010infoProcRetAd]([tpProcRetAdic],[nrProcRetAdic],[codSuspAdic],[valorAdic],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ({0},'{1}','{2}',{3},{4},'{5}')",
+					entidade.tpProcRetAdic,
+					entidade.nrProcRetAdic,
+					entidade.codSuspAdic,
+					entidade.valorAdic,
+					Id,
+					Chave
+				);
 
-                using (ConexaoBD _BD = new ConexaoBD(Banco))
+				using (ConexaoBD _BD = new ConexaoBD(Banco))
                 {
                     var Ide = _BD.InserirDado(strQuery);
                     entidade.Id = Convert.ToInt32(Ide);

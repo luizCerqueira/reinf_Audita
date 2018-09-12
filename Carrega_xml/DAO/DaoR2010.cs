@@ -20,16 +20,16 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2010]([iniValid],[fimValid],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInscr],[classTrib],[indEscrituracao],[indDesoneracao],[indAcordoIsenMulta],[indSitPJ],[nmCtt],[cpfCtt],[foneFixo],[foneCel],[email],[ideEFR],[cnpjEFR],[operacao],[pai],[tpAtividade],[indObra],[tpServ],[nrCNO],[infoCPRB],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}','{2}','{3}','{4}','{5: yyyy-MM-dd}','{6}','{7}','{8}','{9}','{10}','{11}',{12},{13},{14},{15},{16},{17},'{18}',{19},{20},'{21}')",
-					entidade.tpAmb,
-					entidade.procEmi,
-					entidade.verProc,
+				string strQuery = "INSERT INTO [dbo].[R2010]([indRetif],[nrRecibo],[perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[tpInscEstab],[nrInscEstab],[indObra],[cnpjPrestador],[vlrTotalBruto],[vlrTotalBaseRet],[vlrTotalRetPrinc],[vlrTotalRetAdic],[vlrTotalNRetPrinc],[vlrTotalNRetAdic],[indCPRB],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ('{0}','{1}','{2: yyyy-MM-dd}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}',{12},{13},{14},{15},{16},{17},{18},{19},'{20}')",
 					entidade.indRetif,
 					entidade.nrRecibo,
 					entidade.perApur,
-					entidade.tpInscContri,
-					entidade.nrInscContri,
+					entidade.tpAmb,
+					entidade.procEmi,
+					entidade.verProc,
+					entidade.tpInsc,
+					entidade.nrInsc,
 					entidade.tpInscEstab,
 					entidade.nrInscEstab,
 					entidade.indObra,
@@ -40,7 +40,6 @@ namespace DAO
 					entidade.vlrTotalRetAdic,
 					entidade.vlrTotalNRetPrinc,
 					entidade.vlrTotalNRetAdic,
-					entidade.codAnaCont,
 					entidade.indCPRB,
 					Id,
 					entidade.Chave

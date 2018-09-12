@@ -18,27 +18,23 @@ namespace DAO
         {
             try
             {
-                string strQuery = "INSERT INTO [dbo].[R2010infoTpServ]([tpServico],[codAtivEcon],[vlrMatEquip],[vlrDedAlim],[vlrDedTrans],[vlrBaseRet],[vlrRetencao],[vlrRetSub],[vlrNRetPrinc],[vlrServicos15],[vlrServicos20],[vlrServicos25],[vlrAdicional],[vlrNRetAdic],[R2010nfs],[Chave])";
-                strQuery += string.Format("VALUES ('{0}', '{1}', {2}, {3}, {4}, {5}, {6}, {7}, {8} , {9} , {10}, {11}, {12}, {13}, {14}, '{15}')",
-                entidade.tpServico,
-                entidade.codAtivEcon,
-                entidade.vlrMatEquip,
-                entidade.vlrDedAlim,
-                entidade.vlrDedTrans,
-                entidade.vlrBaseRet,
-                entidade.vlrRetencao,
-                entidade.vlrRetSub,
-                entidade.vlrNRetPrinc,
-                entidade.vlrServicos15,
-                entidade.vlrServicos20,
-                entidade.vlrServicos25,
-                entidade.vlrAdicional,
-                entidade.vlrNRetAdic,
-                Id,
-                Chave
-                );
+				string strQuery = "INSERT INTO [dbo].[R2010infoTpServ]([tpServico],[vlrBaseRet],[vlrRetencao],[vlrRetSub],[vlrNRetPrinc],[vlrServicos15],[vlrServicos20],[vlrServicos25],[vlrAdicional],[vlrNRetAdic],[R2010nfs],[Chave])";
+				strQuery += string.Format("VALUES ('{0}',{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},'{11}')",
+					entidade.tpServico,
+					entidade.vlrBaseRet,
+					entidade.vlrRetencao,
+					entidade.vlrRetSub,
+					entidade.vlrNRetPrinc,
+					entidade.vlrServicos15,
+					entidade.vlrServicos20,
+					entidade.vlrServicos25,
+					entidade.vlrAdicional,
+					entidade.vlrNRetAdic,
+					Id,
+					Chave
+				);
 
-                using (ConexaoBD _BD = new ConexaoBD(Banco))
+				using (ConexaoBD _BD = new ConexaoBD(Banco))
                 {
                     var Ide = _BD.InserirDado(strQuery);
                     entidade.Id = Convert.ToInt32(Ide);

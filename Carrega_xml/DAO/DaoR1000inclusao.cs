@@ -7,20 +7,20 @@ using Entidades;
 
 namespace DAO
 {
-	public class DaoR1000alteracao : IDAO<R1000alteracao>
+	public class DaoR1000inclusao : IDAO<R1000inclusao>
 	{
 
-		public bool Delete(R1000alteracao entidade, string Banco)
+		public bool Delete(R1000inclusao entidade, string Banco)
 		{
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R1000alteracao entidade, string Banco, int Id, string Chave)
+		public bool Save(R1000inclusao entidade, string Banco, int Id, string Chave)
 		{
 			try
 			{
-				string strQuery = "INSERT INTO [dbo].[R1000alteracao]([iniValid],[fimValid],[classTrib],[indEscrituracao],[indDesoneracao],[indAcordoIsenMulta],[indSitPJ],[nmCtt],[cpfCtt],[foneFixo],[foneCel],[email],[cnpjSoftHouse],[nmRazao],[nmCont],[telefone],[emailSoft],[ideEFR],[cnpjEFR],[iniValidN],[fimValidN],[R1000],[Chave])";
-				strQuery += string.Format("VALUES ('{0: yyyy-MM-dd}','{1: yyyy-MM-dd}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19: yyyy-MM-dd}','{20: yyyy-MM-dd}',{21},'{22}')",
+				string strQuery = "INSERT INTO [dbo].[R1000inclusao]([iniValid],[fimValid],[classTrib],[indEscrituracao],[indDesoneracao],[indAcordoIsenMulta],[indSitPJ],[nmCtt],[cpfCtt],[foneFixo],[foneCel],[email],[cnpjSoftHouse],[nmRazao],[nmCont],[telefone],[emailSoft],[ideEFR],[cnpjEFR],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ('{0: yyyy-MM-dd}','{1: yyyy-MM-dd}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}',{19},'{20}')",
 					entidade.iniValid,
 					entidade.fimValid,
 					entidade.classTrib,
@@ -40,11 +40,11 @@ namespace DAO
 					entidade.emailSoft,
 					entidade.ideEFR,
 					entidade.cnpjEFR,
-					entidade.iniValidN,
-					entidade.fimValidN,
 					Id,
 					Chave
 				);
+
+
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
@@ -63,7 +63,7 @@ namespace DAO
 
 		}
 
-		public bool Update(R1000alteracao entidade, string Banco)
+		public bool Update(R1000inclusao entidade, string Banco)
 		{
 			throw new NotImplementedException();
 		}

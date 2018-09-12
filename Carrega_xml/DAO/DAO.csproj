@@ -43,8 +43,12 @@
     <Compile Include="ConexaoBD.cs" />
     <Compile Include="DaoR1000.cs" />
     <Compile Include="DaoR1000alteracao.cs" />
+    <Compile Include="DaoR1000exclusao.cs" />
+    <Compile Include="DaoR1000inclusao.cs" />
     <Compile Include="DaoR1070.cs" />
-    <Compile Include="DaoR1070infoSusp.cs" />
+    <Compile Include="DaoR1070alteracao.cs" />
+    <Compile Include="DaoR1070exclusao.cs" />
+    <Compile Include="DaoR1070inclusao.cs" />
     <Compile Include="DaoR2010.cs" />
     <Compile Include="DaoR2010infoProcRetAd.cs" />
     <Compile Include="DaoR2010infoProcRetPr.cs" />
