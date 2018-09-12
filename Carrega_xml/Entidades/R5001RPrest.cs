@@ -22,6 +22,6 @@ namespace Entidades
 
 		public double vlrTotalNRetAdic { get; set; }
 
-		public string R5001 { get; set; }
+		public string R5001ideEstab { get; set; }//Alterado
 	}
 }

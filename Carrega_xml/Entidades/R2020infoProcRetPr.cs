@@ -16,6 +16,6 @@ namespace Entidades
 
         public double valorPrinc { get; set; }
 
-        public int R2020indeTomador { get; set; }
+        public int R2020ideTomador { get; set; }
     }
 }

@@ -10,7 +10,15 @@ namespace Entidades
 	{
 		public string cnpjPrestador { get; set; }
 
+		public string cno { get; set; }//Adicionado
+
 		public double vlrTotalBaseRet { get; set; }
+
+		public string CRTom { get; set; }//Adicionado
+
+		public double vlrCRTom { get; set; }//Adicionado
+
+		public double vlrCRTomSusp { get; set; }//Adicionado
 
 		public double vlrTotalRetPrinc { get; set; }
 
@@ -20,6 +28,6 @@ namespace Entidades
 
 		public double vlrTotalNRetAdic { get; set; }
 
-		public int R5001 { get; set; }
+		public int R5001ideEstab { get; set; }//Alterado
 	}
 }

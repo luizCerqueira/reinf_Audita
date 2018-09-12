@@ -20,7 +20,7 @@ namespace Entidades
 
 		public double vlrCPRBapur { get; set; }
 
-		public string codAnaCont { get; set; }
+		//public string codAnaCont { get; set; } Removido
 
 		public int R2060 { get; set; }
 	}

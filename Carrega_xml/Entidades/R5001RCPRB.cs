@@ -8,12 +8,14 @@ namespace Entidades
 {
 	public class R5001RCPRB : Entidade
 	{
-		public string codRec { get; set; }
+		//public string codRec { get; set; } Removido
 
-		public double vlrCPApurTotal { get; set; }
+		public string CRCPRB { get; set; }
 
-		public double vlrCPRBSusp { get; set; }
+		public double vlrCRCPRB { get; set; }//Alterado
 
-		public string R5001 { get; set; }
+		public double vlrCRCPRBSusp { get; set; }//Aterado
+
+		public string R5001ideEstab { get; set; }//Alterado
 	}
 }

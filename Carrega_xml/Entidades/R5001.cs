@@ -18,13 +18,29 @@ namespace Entidades
 
 		public string descRetorno { get; set; }
 
+		public string nrProtEntr { get; set; }//Adicionado
+
 		public DateTime dhProcess { get; set; }
 
 		public string tpEv { get; set; }
 
 		public string idEv { get; set; }
 
-		public string HASH { get; set; }
+		public string hash { get; set; }//Alterado
+
+		public string CRComl { get; set; }//Adicionado
+
+		public string vlrCRComl { get; set; }//Adicionado
+
+		public string vlrCRComlSusp { get; set; }//Adicionado
+
+		public string CRRecEspetDesp { get; set; }//Adicionado
+
+		public double vlrReceitaTotal { get; set; }//Adicionado
+
+		public double vlrCRRecEspetDesp { get; set; }//Adicionado
+
+		public double vlrCRRecEspetDespSusp { get; set; }
 
 		public string nrRecArqBase { get; set; }
 

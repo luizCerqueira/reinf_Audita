@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class R2050nfs : Entidade
 	{
-        public string serie { get; set; }
+        /*public string serie { get; set; }
 
         public string numDocto { get; set; }
 
@@ -16,6 +16,7 @@ namespace Entidades
 
         public double vlrBruto { get; set; }
 
-        public int R2050tipoCom { get; set; }
+        public int R2050tipoCom { get; set; }*/
+		//Removida
     }
 }

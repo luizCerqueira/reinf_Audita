@@ -8,13 +8,13 @@ namespace Entidades
 {
 	public class R2099 : Entidade
 	{
+		public DateTime perApur { get; set; }
+
 		public string tpAmb { get; set; }
 
 		public string procEmi { get; set; }
 
 		public string verProc { get; set; }
-
-		public DateTime perApur { get; set; }
 
 		public string tpInsc { get; set; }
 

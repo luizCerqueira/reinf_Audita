@@ -12,10 +12,16 @@ namespace Entidades
 
 		public double vlrTotalRep { get; set; }
 
-		public double vlrTotalRet { get; set; }
+		public string CRRecRepAD { get; set; }//Adicionado
 
-		public double vlrTotalNRet { get; set; }
+		//public double vlrTotalRet { get; set; } Removido
 
-		public int R5001 { get; set; }
+		public double vlrCRRecRepAD { get; set; }//Adicionado
+
+		public double vlrCRRecRepADSusp { get; set; }//Adicionado
+
+		//public double vlrTotalNRet { get; set; } Removido
+
+		public int R5001ideEstab { get; set; }//Alterado
 	}
 }

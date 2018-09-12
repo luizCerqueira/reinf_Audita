@@ -8,13 +8,13 @@ namespace Entidades
 {
 	public class R3010infoProc : Entidade
 	{
-		public string vlrCPSusp { get; set; }
+		public string tpProc { get; set; }//Alterado
 
-		public string tpProcesso { get; set; }
-
-		public string nrProcesso { get; set; }
+		public string nrProc { get; set; }//Alterado
 
 		public string codSusp { get; set; }
+
+		public string vlrCPSusp { get; set; }
 
 		public string R3010ideEstab { get; set; }
 	}

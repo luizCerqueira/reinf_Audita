@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	public class R1070 : Entidade
+	public class R5001ideEstab : Entidade
 	{
-		public string tpAmb{ get; set; }
-
-		public string procEmi { get; set; }
-
-		public string verProc { get; set; }
+		//Criada
 
 		public string tpInsc { get; set; }
 
 		public string nrInsc { get; set; }
 
-		public int R1000 { get; set; }
-}
+	}
 }

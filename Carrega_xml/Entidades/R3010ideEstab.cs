@@ -8,9 +8,9 @@ namespace Entidades
 {
 	public class R3010ideEstab : Entidade
 	{
-		public string tpInsc { get; set; }
+		public string tpInscEstab { get; set; }//Alterado
 
-		public string nrInsc { get; set; }
+		public string nrInscEstab { get; set; }//Alterado
 
 		public double vlrReceitaTotal { get; set; }
 

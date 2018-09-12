@@ -8,21 +8,21 @@ namespace Entidades
 {
 	public class R2060 : Entidade
 	{
-		public string tpAmb { get; set; }
-
-		public string procEmi { get; set; }
-
-		public string verProc { get; set; }
-
 		public string indRetif { get; set; }
 
 		public string nrRecibo { get; set; }
 
 		public DateTime perApur { get; set; }
 
-		public string tpInscContri { get; set; }
+		public string tpAmb { get; set; }
 
-		public string nrInscContri { get; set; }
+		public string procEmi { get; set; }
+
+		public string verProc { get; set; }
+
+		public string tpInsc { get; set; } //Alterada
+
+		public string nrInsc { get; set; } //Alterada
 
 		public string tpInscEstab { get; set; }
 

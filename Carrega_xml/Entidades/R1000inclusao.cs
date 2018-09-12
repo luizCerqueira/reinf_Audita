@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R1000inclusao : Entidade
+	public class R1000inclusao : Entidade
 	{
 		// Esta classe contém nomes de atributo que não são completamente fiéis à suas contrapartes no xml referente,
 		// porém, no processo de coleta dos dados dos xml, os dados serão atribuídos à seus atributos funcionais corretos.
@@ -35,10 +35,6 @@ namespace Entidades
 
 		public string email { get; set; }
 
-		public string ideEFR { get; set; }
-
-		public string cnpjEFR { get; set; }
-
 		public string cnpjSoftHouse { get; set; }
 
 		public string nmRazao { get; set; }
@@ -48,5 +44,11 @@ namespace Entidades
 		public string telefone { get; set; }
 
 		public string emailSoft { get; set; }//Representa o valor email do grupo softHouse
+
+		public string ideEFR { get; set; }
+
+		public string cnpjEFR { get; set; }
+
+		public int R1000 { get; set; }
 	}
 }

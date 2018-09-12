@@ -20,8 +20,6 @@ namespace Entidades
 
         public string verProc { get; set; }
 
-        
-
         public string tpInsc { get; set; } //ALTERADO
 
         public string nrInsc { get; set; } //ALTERADO
