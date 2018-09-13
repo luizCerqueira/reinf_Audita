@@ -26,8 +26,6 @@ namespace Entidades
 
 		public string dscResp { get; set; }
 
-
-
 		public int R1000 { get; set; }
 	}
 }

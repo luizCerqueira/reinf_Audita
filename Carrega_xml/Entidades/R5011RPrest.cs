@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5011RPrest
+	public class R5011RPrest : Entidade
 	{
 		public string tpInscTomador { get; set; }
 

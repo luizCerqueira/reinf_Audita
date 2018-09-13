@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5011infoRecEv
+	public class R5011infoRecEv : Entidade
 	{
 		public string nrProtEntr { get; set; }
 

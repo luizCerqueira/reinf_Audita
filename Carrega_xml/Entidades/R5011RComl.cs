@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5011RComl
+	public class R5011RComl : Entidade
 	{
 		public string CRComl { get; set; }
 

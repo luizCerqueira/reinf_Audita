@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5011RCPRB
+	public class R5011RCPRB : Entidade
 	{
 		public string CRCPRB { get; set; }
 

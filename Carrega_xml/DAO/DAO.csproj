@@ -94,6 +94,14 @@
     <Compile Include="DaoR5001RPrest.cs" />
     <Compile Include="DaoR5001RRecRepAD.cs" />
     <Compile Include="DaoR5001RTom.cs" />
+    <Compile Include="DaoR5011.cs" />
+    <Compile Include="DaoR5011infoRecEv.cs" />
+    <Compile Include="DaoR5011infoTotalContrib.cs" />
+    <Compile Include="DaoR5011RComl.cs" />
+    <Compile Include="DaoR5011RCPRB.cs" />
+    <Compile Include="DaoR5011RPrest.cs" />
+    <Compile Include="DaoR5011RRecRepAD.cs" />
+    <Compile Include="DaoR5011RTom.cs" />
     <Compile Include="DaoR9000.cs" />
     <Compile Include="IDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

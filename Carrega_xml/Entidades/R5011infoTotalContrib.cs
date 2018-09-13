@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5011infoTotalContrib
+	public class R5011infoTotalContrib : Entidade
 	{
 		public string nrRecArqBase { get; set; }
 

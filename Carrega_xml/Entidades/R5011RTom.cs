@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	class R5011RTom
+	public class R5011RTom : Entidade
 	{
 		public string cnpjPrestador { get; set; }
 
