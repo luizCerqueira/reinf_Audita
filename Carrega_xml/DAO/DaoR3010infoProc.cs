@@ -20,15 +20,15 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R3010infoProc]([vlrCPSusp],[tpProcesso],[nrProcesso],[codSusp],[R3010ideEstab],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R3010infoProc]([tpProc],[nrProc],[codSusp],[vlrCPSusp],[R3010ideEstab],[Chave])";
 				strQuery += string.Format("VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')",
-					entidade.vlrCPSusp,
-					entidade.tpProcesso,
-					entidade.nrProcesso,
+					entidade.tpProc,
+					entidade.nrProc,
 					entidade.codSusp,
+					entidade.vlrCPSusp,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

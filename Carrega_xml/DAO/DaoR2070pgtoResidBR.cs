@@ -17,38 +17,7 @@ namespace DAO
 
 		public bool Save(R2070pgtoResidBR entidade, string Banco, int Id, string Chave)
 		{
-			try
-			{
-
-				string strQuery = "INSERT INTO [dbo].[R2070pgtoResidBR]([tipoPgtoResidBR],[dtPagto],[vlrRendTributavel],[vlrRet],[indSuspExig],[indDecTerceiro],[vlrIRRF],[vlrCompAnoCalend],[vlrCompAnoAnt],[R2070ideEstab],[Chave])";
-				strQuery += string.Format("VALUES ({0},'{1: yyyy-MM-dd}',{2},{3},'{4}','{5}',{6},{7},{8},{9},'{10}')",
-					entidade.tipoPgtoResidBR,
-					entidade.dtPagto,
-					entidade.vlrRendTributavel,
-					entidade.vlrRet,
-					entidade.indSuspExig,
-					entidade.indDecTerceiro,
-					entidade.vlrIRRF,
-					entidade.vlrCompAnoCalend,
-					entidade.vlrCompAnoAnt,
-					Id,
-					Chave
-					);
-
-				using (ConexaoBD _BD = new ConexaoBD(Banco))
-				{
-					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
-				}
-
-
-				return true;
-			}
-			catch (Exception ex)
-			{
-				return false;
-			}
-
+			throw new NotImplementedException();
 		}
 
 		public bool Update(R2070pgtoResidBR entidade, string Banco)

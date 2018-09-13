@@ -8,9 +8,9 @@ namespace Entidades
 {
 	public class R3010infoProc : Entidade
 	{
-		public string tpProc { get; set; }//Alterado
+		public string tpProc { get; set; }
 
-		public string nrProc { get; set; }//Alterado
+		public string nrProc { get; set; }
 
 		public string codSusp { get; set; }
 

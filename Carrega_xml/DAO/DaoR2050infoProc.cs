@@ -30,7 +30,7 @@ namespace DAO
 					entidade.vlrSenarSusp,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

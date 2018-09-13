@@ -27,7 +27,7 @@ namespace DAO
 					entidade.descReceita,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

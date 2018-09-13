@@ -20,17 +20,17 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2098]([tpAmb],[procEmi],[verProc],[perApur],[tpInsc],[nrInsc],[R1000],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}','{2}','{3: yyyy-MM-dd}','{4}','{5}',{6},'{7}')",
+				string strQuery = "INSERT INTO [dbo].[R2098]([perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ('{0: yyyy-MM-dd}','{1}','{2}','{3}','{4}','{5}',{6},'{7}')",
+					entidade.perApur,
 					entidade.tpAmb,
 					entidade.procEmi,
 					entidade.verProc,
-					entidade.perApur,
 					entidade.tpInsc,
 					entidade.nrInsc,
 					Id,
 					entidade.Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

@@ -64,11 +64,9 @@
     <Compile Include="DaoR2040recursosRep.cs" />
     <Compile Include="DaoR2050.cs" />
     <Compile Include="DaoR2050infoProc.cs" />
-    <Compile Include="DaoR2050nfs.cs" />
     <Compile Include="DaoR2050tipoCom.cs" />
     <Compile Include="DaoR2060.cs" />
     <Compile Include="DaoR2060infoProc.cs" />
-    <Compile Include="DaoR2060nfs.cs" />
     <Compile Include="DaoR2060tipoAjuste.cs" />
     <Compile Include="DaoR2060tipoCod.cs" />
     <Compile Include="DaoR2070.cs" />

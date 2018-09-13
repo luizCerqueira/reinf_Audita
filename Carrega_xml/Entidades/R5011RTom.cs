@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	public class R5001RTom : Entidade
+	class R5011RTom
 	{
 		public string cnpjPrestador { get; set; }
 
@@ -20,14 +20,6 @@ namespace Entidades
 
 		public double vlrCRTomSusp { get; set; }
 
-		public double vlrTotalRetPrinc { get; set; }
-
-		public double vlrTotalRetAdic { get; set; }
-
-		public double vlrTotalNRetPrinc { get; set; }
-
-		public double vlrTotalNRetAdic { get; set; }
-
-		public int R5001ideEstab { get; set; }
+		public int R5011infoTotalContrib { get; set; }
 	}
 }

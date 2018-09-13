@@ -19,14 +19,14 @@ namespace DAO
 		{
 			try
 			{
-				string strQuery = "INSERT INTO [dbo].[R5001RCPRB]([codRec],[vlrCPApurTotal],[vlrCPRBSusp],[R5001],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R5001RCPRB]([CRCPRB],[vlrCRCPRB],[vlrCRCPRBSusp],[R5001ideEstab],[Chave])";
 				strQuery += string.Format("VALUES ('{0}',{1},{2},'{3}','{4}')",
-					entidade.codRec,
-					entidade.vlrCPApurTotal,
-					entidade.vlrCPRBSusp,
+					entidade.CRCPRB,
+					entidade.vlrCRCPRB,
+					entidade.vlrCRCPRBSusp,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

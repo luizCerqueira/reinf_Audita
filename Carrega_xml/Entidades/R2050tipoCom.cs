@@ -12,8 +12,6 @@ namespace Entidades
 
         public int vlrRecBruta { get; set; }
 
-        //public string codAnaCont { get; set; } Removido
-
         public int R2050 { get; set; }
     }
 }

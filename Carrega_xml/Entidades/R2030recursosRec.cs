@@ -18,15 +18,13 @@ namespace Entidades
 
         //GRUPO infoProc
 
-        public int tpProc { get; set; } //ALTERADO
+        public int tpProc { get; set; }
 
-        public string nrProc { get; set; } //ALTERADO
+        public string nrProc { get; set; }
 
         public string codSusp { get; set; }
 
-        public double vlrNRet { get; set; } //INCLUIDO
-
-        //public string codAnaCont { get; set; }
+        public double vlrNRet { get; set; }
 
         public int R2030 { get; set; }
     }

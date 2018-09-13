@@ -20,8 +20,8 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2060tipoAjuste](([tpAjuste],[codAjuste],[vlrAjuste],[descAjuste],[dtAjuste],[R2060tipoCod],[Chave])";
-				strQuery += string.Format("VALUES ({0},{1},{2},'{3}','{4: yy-MM-dd}',{5},'{6}')",
+				string strQuery = "INSERT INTO [dbo].[R2060tipoAjuste]([tpAjuste],[codAjuste],[vlrAjuste],[descAjuste],[dtAjuste],[R2060tipoCod],[Chave])";
+				strQuery += string.Format("VALUES ({0},{1},{2},'{3}','{4: yyyy-MM-dd}',{5},'{6}')",
 					entidade.tpAjuste,
 					entidade.codAjuste,
 					entidade.vlrAjuste,
@@ -29,7 +29,7 @@ namespace DAO
 					entidade.dtAjuste,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

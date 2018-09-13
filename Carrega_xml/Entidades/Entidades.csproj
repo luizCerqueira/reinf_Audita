@@ -69,11 +69,9 @@
     <Compile Include="R2040recursosRep.cs" />
     <Compile Include="R2050.cs" />
     <Compile Include="R2050infoProc.cs" />
-    <Compile Include="R2050nfs.cs" />
     <Compile Include="R2050tipoCom.cs" />
     <Compile Include="R2060.cs" />
     <Compile Include="R2060infoProc.cs" />
-    <Compile Include="R2060nfs.cs" />
     <Compile Include="R2060tipoAjuste.cs" />
     <Compile Include="R2060tipoCod.cs" />
     <Compile Include="R2070.cs" />
@@ -102,6 +100,14 @@
     <Compile Include="R5001RPrest.cs" />
     <Compile Include="R5001RRecRepAD.cs" />
     <Compile Include="R5001RTom.cs" />
+    <Compile Include="R5011.cs" />
+    <Compile Include="R5011infoRecEv.cs" />
+    <Compile Include="R5011infoTotalContrib.cs" />
+    <Compile Include="R5011RComl.cs" />
+    <Compile Include="R5011RCPRB.cs" />
+    <Compile Include="R5011RPrest.cs" />
+    <Compile Include="R5011RRecRepAD.cs" />
+    <Compile Include="R5011RTom.cs" />
     <Compile Include="R9000.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

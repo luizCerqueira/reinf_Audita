@@ -20,12 +20,12 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2099]([tpAmb],[procEmi],[verProc],[perApur],[tpInsc],[nrInsc],[nmResp],[cpfResp],[telefone],[email],[evtServTm],[evtServPr],[evtAssDespRec],[evtAssDespRep],[evtComProd],[evtCPRB],[evtPgtos],[compSemMovto],[R1000],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}','{2}','{3: yyyy-MM-dd}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}',{18},'{19}')",
+				string strQuery = "INSERT INTO [dbo].[R2099]([perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[nmResp],[cpfResp],[telefone],[email],[evtServTm],[evtServPr],[evtAssDespRec],[evtAssDespRep],[evtComProd],[evtCPRB],[evtPgtos],[compSemMovto],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ('{0: yyyy-MM-dd}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}',{18},'{19}')",
+					entidade.perApur,
 					entidade.tpAmb,
 					entidade.procEmi,
 					entidade.verProc,
-					entidade.perApur,
 					entidade.tpInsc,
 					entidade.nrInsc,
 					entidade.nmResp,
@@ -42,7 +42,7 @@ namespace DAO
 					entidade.compSemMovto,
 					Id,
 					entidade.Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

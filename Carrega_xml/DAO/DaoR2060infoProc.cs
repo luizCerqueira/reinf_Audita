@@ -20,7 +20,7 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2060infoProc](,[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R2060infoProc]([tpProc],[nrProc],[codSusp],[vlrCPRBSusp],[R2060tipoCod],[Chave])";
 				strQuery += string.Format("VALUES ({0},'{1}','{2}',{3},{4},'{5}')",
 					entidade.tpProc,
 					entidade.nrProc,
@@ -28,7 +28,7 @@ namespace DAO
 					entidade.vlrCPRBSusp,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

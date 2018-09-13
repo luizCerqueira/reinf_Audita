@@ -18,7 +18,7 @@ namespace Entidades
 
 		public string descRetorno { get; set; }
 
-		public string nrProtEntr { get; set; }//Adicionado
+		public string nrProtEntr { get; set; }
 
 		public DateTime dhProcess { get; set; }
 
@@ -26,19 +26,19 @@ namespace Entidades
 
 		public string idEv { get; set; }
 
-		public string hash { get; set; }//Alterado
+		public string hash { get; set; }
 
-		public string CRComl { get; set; }//Adicionado
+		public string CRComl { get; set; }
 
-		public string vlrCRComl { get; set; }//Adicionado
+		public string vlrCRComl { get; set; }
 
-		public string vlrCRComlSusp { get; set; }//Adicionado
+		public string vlrCRComlSusp { get; set; }
 
-		public string CRRecEspetDesp { get; set; }//Adicionado
+		public string CRRecEspetDesp { get; set; }
 
-		public double vlrReceitaTotal { get; set; }//Adicionado
+		public double vlrReceitaTotal { get; set; }
 
-		public double vlrCRRecEspetDesp { get; set; }//Adicionado
+		public double vlrCRRecEspetDesp { get; set; }
 
 		public double vlrCRRecEspetDespSusp { get; set; }
 

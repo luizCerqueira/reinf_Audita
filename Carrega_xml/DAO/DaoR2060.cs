@@ -20,16 +20,16 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2060]([tpAmb],[procEmi],[verProc],[indRetif],[nrRecibo],[perApur],[tpInscContri],[nrInscContri],[tpInscEstab],[nrInscEstab],[vlrRecBrutaTotal],[vlrCPApurTotal],[vlrCPRBSuspTotal],[tpProcesso],[nrProcesso],[codSusp],[R1000],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}','{2}','{3}','{4}','{5: yyyy-MM-dd}','{6}','{7}','{8}','{9}',{10},{11},{12},{13},'{14}','{15}',{16},'{17}')",
-					entidade.tpAmb,
-					entidade.procEmi,
-					entidade.verProc,
+				string strQuery = "INSERT INTO [dbo].[R2060]([indRetif],[nrRecibo],[perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[tpInscEstab],[nrInscEstab],[vlrRecBrutaTotal],[vlrCPApurTotal],[vlrCPRBSuspTotal],[tpProcesso],[nrProcesso],[codSusp],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ('{0}','{1}','{2: yyyy-MM-dd}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},{11},{12},{13},'{14}','{15}',{16},'{17}')",
 					entidade.indRetif,
 					entidade.nrRecibo,
 					entidade.perApur,
-					entidade.tpInscContri,
-					entidade.nrInscContri,
+					entidade.tpAmb,
+					entidade.procEmi,
+					entidade.verProc,
+					entidade.tpInsc,
+					entidade.nrInsc,
 					entidade.tpInscEstab,
 					entidade.nrInscEstab,
 					entidade.vlrRecBrutaTotal,
@@ -40,7 +40,7 @@ namespace DAO
 					entidade.codSusp,
 					Id,
 					entidade.Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

@@ -18,7 +18,5 @@ namespace Entidades
 
         public int R2040recursosRep { get; set; }
 
-        
-
     }
 }

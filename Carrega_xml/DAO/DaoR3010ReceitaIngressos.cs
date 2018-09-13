@@ -31,7 +31,7 @@ namespace DAO
 					entidade.vlrTotal,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

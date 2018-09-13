@@ -20,8 +20,8 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2020ideTomador]([tpInscTomador],[nrInscTomador],[indObra],[vlrTotalBruto],[vlrTotalBaseRet],[vlrTotalRetPrinc],[vlrTotalRetAdic],[vlrTotalNRetPrinc],[vlrTotalNRetAdic],[codAnaCont],[R2020],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}',{2},{3},{4},{5},{6},{7},{8},'{9}',{10},'{11}')",
+				string strQuery = "INSERT INTO [dbo].[R2020ideTomador]([tpInscTomador],[nrInscTomador],[indObra],[vlrTotalBruto],[vlrTotalBaseRet],[vlrTotalRetPrinc],[vlrTotalRetAdic],[vlrTotalNRetPrinc],[vlrTotalNRetAdic],[R2020],[Chave])";
+				strQuery += string.Format("VALUES ('{0}','{1}',{2},{3},{4},{5},{6},{7},{8},{9},'{10}')",
 					entidade.tpInscTomador,
 					entidade.nrInscTomador,
 					entidade.indObra,
@@ -31,10 +31,9 @@ namespace DAO
 					entidade.vlrTotalRetAdic,
 					entidade.vlrTotalNRetPrinc,
 					entidade.vlrTotalNRetAdic,
-					entidade.codAnaCont,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

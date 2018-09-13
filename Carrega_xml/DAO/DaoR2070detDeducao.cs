@@ -17,31 +17,7 @@ namespace DAO
 
 		public bool Save(R2070detDeducao entidade, string Banco, int Id, string Chave)
 		{
-			try
-			{
-
-				string strQuery = "INSERT INTO [dbo].[R2070detDeducao]([indTpDeducao],[vlrDeducao],[R2070pgtoResidBR],[Chave])";
-				strQuery += string.Format("VALUES ({0},{1},{2},'{3}')",
-					entidade.indTpDeducao,
-					entidade.vlrDeducao,
-					Id,
-					Chave
-					);
-
-				using (ConexaoBD _BD = new ConexaoBD(Banco))
-				{
-					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
-				}
-
-
-				return true;
-			}
-			catch (Exception ex)
-			{
-				return false;
-			}
-
+			throw new NotImplementedException();
 		}
 
 		public bool Update(R2070detDeducao entidade, string Banco)

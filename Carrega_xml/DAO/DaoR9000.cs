@@ -32,7 +32,7 @@ namespace DAO
 					entidade.perApur,
 					Id,
 					entidade.Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

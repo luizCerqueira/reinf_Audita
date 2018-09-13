@@ -20,10 +20,10 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R3010ideEstab]([tpInsc],[nrInsc],[vlrReceitaTotal],[vlrCP],[vlrCPSuspTotal],[vlrReceitaClubes],[vlrRetParc],[R3010],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R3010ideEstab]([tpInscEstab],[nrInscEstab],[vlrReceitaTotal],[vlrCP],[vlrCPSuspTotal],[vlrReceitaClubes],[vlrRetParc],[R3010],[Chave])";
 				strQuery += string.Format("VALUES ('{0}','{1}',{2},{3},{4},{5},{6},{7},'{8}')",
-					entidade.tpInsc,
-					entidade.nrInsc,
+					entidade.tpInscEstab,
+					entidade.nrInscEstab,
 					entidade.vlrReceitaTotal,
 					entidade.vlrCP,
 					entidade.vlrCPSuspTotal,
@@ -31,7 +31,7 @@ namespace DAO
 					entidade.vlrRetParc,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

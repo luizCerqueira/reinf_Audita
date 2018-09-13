@@ -20,18 +20,17 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2060tipoCod]([codAtivEcon],[vlrRecBrutaAtiv],[vlrExcRecBruta],[vlrAdicRecBruta],[vlrBcCPRB],[vlrCPRBapur],[codAnaCont],[R2060],[Chave])";
-				strQuery += string.Format("VALUES ('{0}',{1},{2},{3},{4},{5},'{6}',{7},'{8}')",
+				string strQuery = "INSERT INTO [dbo].[R2060tipoCod]([codAtivEcon],[vlrRecBrutaAtiv],[vlrExcRecBruta],[vlrAdicRecBruta],[vlrBcCPRB],[vlrCPRBapur],[R2060],[Chave])";
+				strQuery += string.Format("VALUES ('{0}',{1},{2},{3},{4},{5},{6},'{7}')",
 					entidade.codAtivEcon,
 					entidade.vlrRecBrutaAtiv,
 					entidade.vlrExcRecBruta,
 					entidade.vlrAdicRecBruta,
 					entidade.vlrBcCPRB,
 					entidade.vlrCPRBapur,
-					entidade.codAnaCont,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

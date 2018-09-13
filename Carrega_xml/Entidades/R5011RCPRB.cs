@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	public class R5001RCPRB : Entidade
+	class R5011RCPRB
 	{
 		public string CRCPRB { get; set; }
 
@@ -14,6 +14,6 @@ namespace Entidades
 
 		public double vlrCRCPRBSusp { get; set; }
 
-		public string R5001ideEstab { get; set; }
+		public int R5011infoTotalContrib { get; set; }
 	}
 }

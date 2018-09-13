@@ -37,7 +37,7 @@ namespace DAO
 					entidade.qtdeNaoPagantes,
 					Id,
 					Chave
-					);
+				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{

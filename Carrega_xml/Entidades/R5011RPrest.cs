@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	public class R5001RPrest : Entidade
+	class R5011RPrest
 	{
 		public string tpInscTomador { get; set; }
 
@@ -22,6 +22,6 @@ namespace Entidades
 
 		public double vlrTotalNRetAdic { get; set; }
 
-		public string R5001ideEstab { get; set; }
+		public int R5011infoTotalContrib { get; set; }
 	}
 }
