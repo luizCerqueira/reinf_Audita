@@ -37,7 +37,7 @@ namespace DAO
 
 
 
-				return true;
+				return (entidade.Id != 0 ? true : false);
 			}
 			catch (Exception ex)
 			{

@@ -15,7 +15,7 @@ namespace ConsoleTeste
     {
         static void Main(string[] args)
         {
-            string a = (@"C:\Users\k\Desktop\Luiz\Projetos\Reinf_Xml\testexmls\R-1000-ID1019399790000002018061211533500000.xml");
+            /*string a = (@"C:\Users\k\Desktop\Luiz\Projetos\Reinf_Xml\testexmls\R-1000-ID1019399790000002018061211533500000.xml");
             R1000 r = new R1000();
             DaoR1000 dao = new DaoR1000();
             XmlDocument xml = new XmlDocument();
@@ -66,7 +66,7 @@ namespace ConsoleTeste
             
 
             
-
+	*/
         }
     }
 }

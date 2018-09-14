@@ -31,6 +31,13 @@ namespace DAO
             this.Server = "srvaca01";
             _conexao = new SqlConnection("Server = " + Server + ";Database=" + this.Database + ";User Id=" + User + ";Password=" + Passoword + ";");
             _conexao.Open();
+
+
+
+
+
+
+
         }
 
         public object InserirDado(string sql, bool transaction = false)

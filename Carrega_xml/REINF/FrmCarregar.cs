@@ -89,5 +89,10 @@ namespace REINF
                 txtCaminho.Text =  dlg.SelectedPath;
             }
         }
-    }
+
+		private void FrmCarregar_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

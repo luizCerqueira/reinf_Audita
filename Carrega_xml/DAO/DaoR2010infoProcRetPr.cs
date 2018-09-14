@@ -33,9 +33,9 @@ namespace DAO
                     var Ide = _BD.InserirDado(strQuery);
                     entidade.Id = Convert.ToInt32(Ide);
                 }
-                
-                return true;
-            }
+
+				return (entidade.Id != 0 ? true : false);
+			}
             catch (Exception ex)
             {
                 return false;
