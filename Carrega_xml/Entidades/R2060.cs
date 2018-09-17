@@ -34,12 +34,6 @@ namespace Entidades
 
 		public double vlrCPRBSuspTotal { get; set; }
 
-		public int tpProcesso { get; set; }
-
-		public string nrProcesso { get; set; }
-
-		public string codSusp { get; set; }
-
 		public int R1000 { get; set; }
 
 	}

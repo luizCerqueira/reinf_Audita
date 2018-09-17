@@ -20,8 +20,8 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2060]([indRetif],[nrRecibo],[perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[tpInscEstab],[nrInscEstab],[vlrRecBrutaTotal],[vlrCPApurTotal],[vlrCPRBSuspTotal],[tpProcesso],[nrProcesso],[codSusp],[R1000],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}','{2: yyyy-MM-dd}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},{11},{12},{13},'{14}','{15}',{16},'{17}')",
+				string strQuery = "INSERT INTO [dbo].[R2060]([indRetif],[nrRecibo],[perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[tpInscEstab],[nrInscEstab],[vlrRecBrutaTotal],[vlrCPApurTotal],[vlrCPRBSuspTotal],[R1000],[Chave])";
+				strQuery += string.Format("VALUES ('{0}','{1}','{2: yyyy-MM-dd}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},{11},{12},{13},'{14}')",
 					entidade.indRetif,
 					entidade.nrRecibo,
 					entidade.perApur,
@@ -35,9 +35,6 @@ namespace DAO
 					entidade.vlrRecBrutaTotal,
 					entidade.vlrCPApurTotal,
 					entidade.vlrCPRBSuspTotal,
-					entidade.tpProcesso,
-					entidade.nrProcesso,
-					entidade.codSusp,
 					Id,
 					entidade.Chave
 				);
