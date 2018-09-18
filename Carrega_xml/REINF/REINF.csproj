@@ -57,6 +57,8 @@
     <Compile Include="CarregarXML\R2098XML.cs" />
     <Compile Include="CarregarXML\R2099XML.cs" />
     <Compile Include="CarregarXML\R3010XML.cs" />
+    <Compile Include="CarregarXML\R5001XML.cs" />
+    <Compile Include="CarregarXML\R5011XML.cs" />
     <Compile Include="Carregar_Xml.cs">
       <SubType>Form</SubType>
     </Compile>

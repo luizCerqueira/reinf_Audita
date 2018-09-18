@@ -14,5 +14,7 @@ namespace Entidades
 
 		public string nrInsc { get; set; }
 
+		public int R5001 { get; set; }
+
 	}
 }

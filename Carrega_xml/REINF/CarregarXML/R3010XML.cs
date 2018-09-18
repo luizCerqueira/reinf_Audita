@@ -38,7 +38,11 @@ namespace REINF
                 {
                     switch (x.Name)
                     {
-                        case "indRetif":
+						case "evtEspDesportivo":
+							x.MoveToAttribute("id");
+							r3010.Chave = x.Value.ToString();
+							break;
+						case "indRetif":
                             r3010.indRetif = x.ReadString();
                             break;
                         case "nrRecibo":

@@ -20,18 +20,14 @@ namespace DAO
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R5001RTom]([cnpjPrestador],[cno],[vlrTotalBaseRet],[CRTom],[vlrCRTom],[vlrCRTomSusp],[vlrTotalRetPrinc],[vlrTotalRetAdic],[vlrTotalNRetPrinc],[vlrTotalNRetAdic],[R5001ideEstab],[Chave])";
-				strQuery += string.Format("VALUES ('{0}','{1}',{2},'{3}',{4},{5},{6},{7},{8},{9},{10},'{11}')",
+				string strQuery = "INSERT INTO [dbo].[R5001RTom]([cnpjPrestador],[cno],[vlrTotalBaseRet],[CRTom],[vlrCRTom],[vlrCRTomSusp],[R5001ideEstab],[Chave])";
+				strQuery += string.Format("VALUES ('{0}','{1}',{2},'{3}',{4},{5},{6},'{7}')",
 					entidade.cnpjPrestador,
 					entidade.cno,
 					entidade.vlrTotalBaseRet,
 					entidade.CRTom,
 					entidade.vlrCRTom,
 					entidade.vlrCRTomSusp,
-					entidade.vlrTotalRetPrinc,
-					entidade.vlrTotalRetAdic,
-					entidade.vlrTotalNRetPrinc,
-					entidade.vlrTotalNRetAdic,
 					Id,
 					Chave
 				);

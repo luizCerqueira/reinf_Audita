@@ -89,6 +89,7 @@
     <Compile Include="DaoR3010outrasReceitas.cs" />
     <Compile Include="DaoR3010ReceitaIngressos.cs" />
     <Compile Include="DaoR5001.cs" />
+    <Compile Include="DaoR5001ideEstab.cs" />
     <Compile Include="DaoR5001RCPRB.cs" />
     <Compile Include="DaoR5001regOcorrs.cs" />
     <Compile Include="DaoR5001RPrest.cs" />

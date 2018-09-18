@@ -20,14 +20,6 @@ namespace Entidades
 
 		public double vlrCRTomSusp { get; set; }
 
-		public double vlrTotalRetPrinc { get; set; }
-
-		public double vlrTotalRetAdic { get; set; }
-
-		public double vlrTotalNRetPrinc { get; set; }
-
-		public double vlrTotalNRetAdic { get; set; }
-
 		public int R5001ideEstab { get; set; }
 	}
 }
