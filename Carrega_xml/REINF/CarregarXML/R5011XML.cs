@@ -96,6 +96,65 @@ namespace REINF
 						case "indExistInfo":
 							r5011InfoTotalContrib.indExistInfo = int.Parse(x.ReadString());
 							break;
+						//R5011RTom
+						case "cnpjPrestador":
+							r5011RTom.cnpjPrestador = x.ReadString();
+							break;
+						case "cno":
+							r5011RTom.cno = x.ReadString();
+							break;
+						case "vlrTotalBaseRet":
+							r5011RTom.vlrTotalBaseRet = double.Parse(x.ReadString());
+							break;
+						case "CRTom":
+							r5011RTom.CRTom = x.ReadString();
+							break;
+						case "vlrCRTom":
+							r5011RTom.vlrCRTom = double.Parse(x.ReadString());
+							break;
+						case "vlrCRTomSusp":
+							r5011RTom.vlrCRTomSusp = double.Parse(x.ReadString());
+							break;
+						//R5011RPrest
+						case "RPrest":
+							do {
+								x.Read();
+								switch (x.Name)
+								{
+									case "tpInscTomador":
+										r5011RPrest.tpInscTomador = x.ReadString();
+										break;
+									case "nrInscTomador":
+										r5011RPrest.nrInscTomador = x.ReadString();
+										break;
+									case "vlrTotalBaseRet":
+										r5011RPrest.vlrTotalBaseRet = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalRetPrinc":
+										r5011RPrest.vlrTotalRetPrinc = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalRetAdic":
+										r5011RPrest.vlrTotalRetAdic = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalNRetPrinc":
+										r5011RPrest.vlrTotalNRetPrinc = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalNRetAdic":
+										r5011RPrest.vlrTotalNRetAdic = double.Parse(x.ReadString());
+										break;
+								}
+							} while (x.NodeType != XmlNodeType.EndElement && x.Name != "RPrest");
+						break;
+						//R5011RRecRepAD
+						case "CRRecRepAD":
+							r5011RRecRepAD.CRRecRepAD = x.ReadString();
+							break;
+						case "vlrCRRecRepAD":
+							r5011RRecRepAD.vlrCRRecRepAD = double.Parse(x.ReadString());
+							break;
+						case "vlrCRRecRepADSusp":
+							r5011RRecRepAD.vlrCRRecRepADSusp = double.Parse(x.ReadString());
+							break;
 						//R5011RComl
 						case "CRComl":
 							r5011RComl.CRComl = x.ReadString();
@@ -115,66 +174,6 @@ namespace REINF
 							break;
 						case "vlrCRCPRBSusp":
 							r5011Rcprb.vlrCRCPRBSusp = double.Parse(x.ReadString());
-							break;
-						//R5011RTom
-						case "R5011RTom":
-							do
-							{
-								x.Read();
-								switch(x.Name){ 
-								case "cnpjPrestador":
-									r5011RTom.cnpjPrestador = x.ReadString();
-									break;
-								case "cno":
-									r5011RTom.cno = x.ReadString();
-									break;
-								case "vlrTotalBaseRet":
-									r5011RTom.vlrTotalBaseRet = double.Parse(x.ReadString());
-									break;
-								case "CRTom":
-									r5011RTom.CRTom = x.ReadString();
-									break;
-								case "vlrCRTom":
-									r5011RTom.vlrCRTom = double.Parse(x.ReadString());
-									break;
-								case "vlrCRTomSusp":
-									r5011RTom.vlrCRTomSusp = double.Parse(x.ReadString());
-									break;
-								} 
-								
-							} while (x.NodeType == XmlNodeType.EndElement && x.Name == "R5011RTom");
-							break;
-						//R5011RPrest
-						case "tpInscTomador":
-							r5011RPrest.tpInscTomador = x.ReadString();
-							break;
-						case "nrInscTomador":
-							r5011RPrest.nrInscTomador = x.ReadString();
-							break;
-						case "vlrTotalBaseRet":
-							r5011RPrest.vlrTotalBaseRet = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalRetPrinc":
-							r5011RPrest.vlrTotalRetPrinc = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalRetAdic":
-							r5011RPrest.vlrTotalRetAdic = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalNRetPrinc":
-							r5011RPrest.vlrTotalNRetPrinc = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalNRetAdic":
-							r5011RPrest.vlrTotalNRetAdic = double.Parse(x.ReadString());
-							break;
-						//R5011RRecRepAD
-						case "CRRecRepAD":
-							r5011RRecRepAD.CRRecRepAD = x.ReadString();
-							break;
-						case "vlrCRRecRepAD":
-							r5011RRecRepAD.vlrCRRecRepAD = double.Parse(x.ReadString());
-							break;
-						case "vlrCRRecRepADSusp":
-							r5011RRecRepAD.vlrCRRecRepADSusp = double.Parse(x.ReadString());
 							break;
 						
 					}

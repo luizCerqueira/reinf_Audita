@@ -28,30 +28,6 @@ namespace Entidades
 
         public double vlrNRetAdic { get; set; }
 
-        public int R2020nfs { get; set; }
-
-        //public string codAtivEcon { get; set; }
-
-        //public double vlrMatEquip { get; set; }
-
-        //public double vlrDedAlim { get; set; }
-
-        //public double vlrDedTrans { get; set; }
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
+        public int R2020nfs { get; set; }    
     }
 }

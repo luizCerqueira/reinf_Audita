@@ -56,6 +56,10 @@
     <Compile Include="DaoR2010nfs.cs" />
     <Compile Include="DaoR2020.cs" />
     <Compile Include="DaoR2020ideTomador.cs" />
+    <Compile Include="DaoR2020infoProcRetAd.cs" />
+    <Compile Include="DaoR2020infoProcRetPr.cs" />
+    <Compile Include="DaoR2020infoTpServ.cs" />
+    <Compile Include="DaoR2020nfs.cs" />
     <Compile Include="DaoR2030.cs" />
     <Compile Include="DaoR2030infoRecurso.cs" />
     <Compile Include="DaoR2030recursosRec.cs" />

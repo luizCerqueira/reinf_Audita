@@ -121,7 +121,7 @@ namespace REINF
 										r1000inc.R1000 = int.Parse(x.ReadString());
 										break;
 								}
-								} while (x.NodeType == XmlNodeType.EndElement && x.Name == "inclusao");
+								} while (x.NodeType != XmlNodeType.EndElement && x.Name != "inclusao");
 							break;
 						case "alteracao":
 							do
@@ -178,11 +178,13 @@ namespace REINF
 										r1000alt.telefone = x.ReadString();
 										break;
 									case "softHouse":
-										x.Read();
-										if (x.Name == "email")
-										{
-											r1000inc.emailSoft = x.ReadString();
-										}
+										do {
+											x.Read();
+											if (x.Name == "email")
+											{
+												r1000inc.emailSoft = x.ReadString();
+											}
+										} while(x.NodeType != XmlNodeType.EndElement && x.Name != "softHouse");
 										break;
 									case "ideEFR":
 										r1000alt.ideEFR = x.ReadString();
@@ -204,18 +206,24 @@ namespace REINF
 										
 										break;
 								}
-							} while (x.NodeType == XmlNodeType.EndElement && x.Name == "alteracao");
+							} while (x.NodeType != XmlNodeType.EndElement && x.Name != "alteracao");
 							break;
 						case "exclusao":
+							do
+							{
+								x.Read();
+								if (x.Name == "iniValid")
+								{
+									r1000exc.iniValid = DateTime.Parse(x.ReadString());
+								}
+								else if (x.Name == "fimValid")
+								{
+									r1000exc.fimValid = DateTime.Parse(x.ReadString());
+								}
+							} while (x.NodeType != XmlNodeType.EndElement && x.Name != "exclusao");
+							break;
 							x.Read();
-							if (x.Name == "iniValid")
-							{
-								r1000exc.iniValid = DateTime.Parse(x.ReadString());
-							}
-							else if (x.Name == "fimValid")
-							{
-								r1000exc.fimValid = DateTime.Parse(x.ReadString());
-							}
+							
 							break;					
 					}
                 }

@@ -134,32 +134,6 @@ namespace REINF
 						case "vlrTotalNRet":
 							r5001.vlrTotalNRet = double.Parse(x.ReadString());
 							break;
-						//R5001ideEstab
-						case "ideEstab":
-							do
-							{
-								x.Read();
-								switch (x.Name)
-								{
-									case "tpInsc":
-										r5001IdeeEstab.tpInsc = x.ReadString();
-										break;
-									case "nrInsc":
-										r5001IdeeEstab.nrInsc = x.ReadString();
-										break;
-								}
-							} while (x.NodeType == XmlNodeType.EndElement && x.Name == "ideEstab");
-							break;
-						//R5001RCPRB
-						case "CRCPRB":
-							r5001Rcprb.CRCPRB = x.ReadString();
-							break;
-						case "vlrCRCPRB":
-							r5001Rcprb.vlrCRCPRB = double.Parse(x.ReadString());
-							break;
-						case "vlrCRCPRBSusp":
-							r5001Rcprb.vlrCRCPRBSusp = double.Parse(x.ReadString());
-							break;
 						//R5001regOcorrs
 						case "tpOcorr":
 							r5001RegOcorrs.tpOcorr = x.ReadString();
@@ -173,66 +147,91 @@ namespace REINF
 						case "dscResp":
 							r5001RegOcorrs.dscResp = x.ReadString();
 							break;
-						//R5001RPrest
-						case "tpInscTomador":
-							r5001RPrest.tpInscTomador = x.ReadString();
+						//R5001ideEstab
+						case "ideEstab":
+							do
+							{
+								x.Read();
+								switch (x.Name)
+								{
+									case "tpInsc":
+										r5001IdeeEstab.tpInsc = x.ReadString();
+										break;
+									case "nrInsc":
+										r5001IdeeEstab.nrInsc = x.ReadString();
+										break;
+									//R5001RTom
+									case "cnpjPrestador":
+										r5001RTom.cnpjPrestador = x.ReadString();
+										break;
+									case "cno":
+										r5001RTom.cno = x.ReadString();
+										break;
+									case "CRTom":
+										r5001RTom.CRTom = x.ReadString();
+										break;
+									case "vlrCRTom":
+										r5001RTom.vlrCRTom = double.Parse(x.ReadString());
+										break;
+									case "vlrCRTomSusp":
+										r5001RTom.vlrCRTomSusp = double.Parse(x.ReadString());
+										break;
+									//R5001RPrest
+									case "tpInscTomador":
+										r5001RPrest.tpInscTomador = x.ReadString();
+										break;
+									case "nrInscTomador":
+										r5001RPrest.nrInscTomador = x.ReadString();
+										break;
+									case "vlrTotalBaseRet":
+										r5001RPrest.vlrTotalBaseRet = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalRetPrinc":
+										r5001RPrest.vlrTotalRetPrinc = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalRetAdic":
+										r5001RPrest.vlrTotalRetAdic = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalNRetPrinc":
+										r5001RPrest.vlrTotalNRetPrinc = double.Parse(x.ReadString());
+										break;
+									case "vlrTotalNRetAdic":
+										r5001RPrest.vlrTotalNRetAdic = double.Parse(x.ReadString());
+										break;
+									//R5001RRecRepAD
+									case "cnpjAssocDesp":
+										r5001RRecRepAD.cnpjAssocDesp = x.ReadString();
+										break;
+									case "vlrTotalRep":
+										r5001RRecRepAD.vlrTotalRep = double.Parse(x.ReadString());
+										break;
+									case "CRRecRepAD":
+										r5001RRecRepAD.CRRecRepAD = x.ReadString();
+										break;
+									case "vlrCRRecRepAD":
+										r5001RRecRepAD.vlrCRRecRepAD = double.Parse(x.ReadString());
+										break;
+									case "vlrCRRecRepADSusp":
+										r5001RRecRepAD.vlrCRRecRepADSusp = double.Parse(x.ReadString());
+										break;
+									//R5001RCPRB
+									case "CRCPRB":
+										r5001Rcprb.CRCPRB = x.ReadString();
+										break;
+									case "vlrCRCPRB":
+										r5001Rcprb.vlrCRCPRB = double.Parse(x.ReadString());
+										break;
+									case "vlrCRCPRBSusp":
+										r5001Rcprb.vlrCRCPRBSusp = double.Parse(x.ReadString());
+										break;
+								}
+							} while (x.NodeType != XmlNodeType.EndElement && x.Name != "ideEstab");
 							break;
-						case "nrInscTomador":
-							r5001RPrest.nrInscTomador = x.ReadString();
-							break;
-						case "vlrTotalBaseRet":
-							r5001RPrest.vlrTotalBaseRet = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalRetPrinc":
-							r5001RPrest.vlrTotalRetPrinc = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalRetAdic":
-							r5001RPrest.vlrTotalRetAdic = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalNRetPrinc":
-							r5001RPrest.vlrTotalNRetPrinc = double.Parse(x.ReadString());
-							break;
-						case "vlrTotalNRetAdic":
-							r5001RPrest.vlrTotalNRetAdic = double.Parse(x.ReadString());
-							break;
-						//R5001RRecRepAD
-						case "cnpjAssocDesp":
-							r5001RRecRepAD.cnpjAssocDesp = x.ReadString();
-							break;
-						case "vlrTotalRep":
-							r5001RRecRepAD.vlrTotalRep = double.Parse(x.ReadString());
-							break;
-						case "CRRecRepAD":
-							r5001RRecRepAD.CRRecRepAD = x.ReadString();
-							break;
-						case "vlrCRRecRepAD":
-							r5001RRecRepAD.vlrCRRecRepAD = double.Parse(x.ReadString());
-							break;
-						case "vlrCRRecRepADSusp":
-							r5001RRecRepAD.vlrCRRecRepADSusp = double.Parse(x.ReadString());
-							break;
-						//R5001RTom
-						case "cnpjPrestador":
-							r5001RTom.cnpjPrestador = x.ReadString();
-							break;
-						case "cno":
-							r5001RTom.cno = x.ReadString();
-							break;
-						case "CRTom":
-							r5001RTom.CRTom = x.ReadString();
-							break;
-						case "vlrCRTom":
-							r5001RTom.vlrCRTom = double.Parse(x.ReadString());
-							break;
-						case "vlrCRTomSusp":
-							r5001RTom.vlrCRTomSusp = double.Parse(x.ReadString());
-							break;
-						
+
 					}
+
 				}
-
 			}
-
 			daoR5001.Save(r5001, database, Id, r5001.Chave);
 			daoR5001IdeeEstab.Save(r5001IdeeEstab, database, Id, r5001.Chave);
 			daoR5001RCPRB.Save(r5001Rcprb, database, Id, r5001.Chave);

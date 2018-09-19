@@ -50,6 +50,7 @@
     <Compile Include="CarregarXML\R1000XML.cs" />
     <Compile Include="CarregarXML\R1070XML.cs" />
     <Compile Include="CarregarXML\R2010XML.cs" />
+    <Compile Include="CarregarXML\R2020XML.cs" />
     <Compile Include="CarregarXML\R2030XML.cs" />
     <Compile Include="CarregarXML\R2040XML.cs" />
     <Compile Include="CarregarXML\R2050XML.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="CarregarXML\R3010XML.cs" />
     <Compile Include="CarregarXML\R5001XML.cs" />
     <Compile Include="CarregarXML\R5011XML.cs" />
+    <Compile Include="CarregarXML\R9000XML.cs" />
     <Compile Include="Carregar_Xml.cs">
       <SubType>Form</SubType>
     </Compile>

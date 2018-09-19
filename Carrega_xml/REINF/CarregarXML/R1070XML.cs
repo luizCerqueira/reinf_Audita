@@ -96,7 +96,7 @@ namespace REINF
                                         r1070Inclusao.idVara = x.ReadString();
                                         break;
                                 }
-                            } while (x.NodeType == XmlNodeType.EndElement && x.Name == "inclusao");
+                            } while (x.NodeType != XmlNodeType.EndElement && x.Name != "inclusao");
                             break;
                         case "alteracao":
                             do
@@ -141,29 +141,35 @@ namespace REINF
                                         r1070Alteracao.idVara = x.ReadString();
                                         break;
                                     case "novaValidade":
-                                        x.Read();
-                                        if (x.Name == "iniValid")
-                                        {
-                                            r1070Alteracao.iniValidN = DateTime.Parse(x.ReadString());
-                                        }
-                                        else if (x.Name == "fimValid")
-                                        {
-                                            r1070Alteracao.fimValidN = DateTime.Parse(x.ReadString());
-                                        }
-                                        break;
+										do {
+											x.Read();
+											switch (x.Name)
+											{
+												case "iniValid":
+													r1070Alteracao.iniValidN = DateTime.Parse(x.ReadString());
+													break;
+												case "fimValid":
+													r1070Alteracao.fimValidN = DateTime.Parse(x.ReadString());
+													break;
+											}
+										} while(x.NodeType != XmlNodeType.EndElement && x.Name != "novaValidade");
+										break;
                                 }
-                            } while (x.NodeType == XmlNodeType.EndElement && x.Name == "alteracao");
+                            } while (x.NodeType != XmlNodeType.EndElement && x.Name != "alteracao");
                             break;
                         case "exclusao":
-                            x.Read();
-                            if (x.Name == "iniValid")
-                            {
-                                r1070Exclusao.iniValid = DateTime.Parse(x.ReadString());
-                            }
-                            else if (x.Name == "fimValid")
-                            {
-                                r1070Exclusao.fimValid = DateTime.Parse(x.ReadString());
-                            }
+							do {
+								x.Read();
+								switch (x.Name)
+								{
+									case "iniValid":
+										r1070Exclusao.iniValid = DateTime.Parse(x.ReadString());
+										break;
+									case "fimValid":
+										r1070Exclusao.fimValid = DateTime.Parse(x.ReadString());
+										break;
+								}
+							} while (x.NodeType != XmlNodeType.EndElement && x.Name != "exclusao");
                             break;
                     }
                 }
