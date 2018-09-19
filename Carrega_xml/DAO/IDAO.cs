@@ -8,9 +8,9 @@ namespace DAO
 {
     public interface IDAO<T> where T: class
     {
-        bool Save(T entidade, string Banco, int Id, string Chave);
+		bool Save(T entidade, string Banco, int Codigo, string Id);
 
-        bool Delete(T entidade, string Banco);
+		bool Delete(T entidade, string Banco);
 
         bool Update(T entidade, string Banco);
 

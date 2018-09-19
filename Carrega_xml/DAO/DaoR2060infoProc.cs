@@ -15,29 +15,30 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R2060infoProc entidade, string Banco, int Id, string Chave)
+		public bool Save(R2060infoProc entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2060infoProc]([tpProc],[nrProc],[codSusp],[vlrCPRBSusp],[R2060tipoCod],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R2060infoProc]([tpProc],[nrProc],[codSusp],[vlrCPRBSusp],[R2060tipoCod],[Id])";
 				strQuery += string.Format("VALUES ({0},'{1}','{2}',{3},{4},'{5}')",
 					entidade.tpProc,
 					entidade.nrProc,
 					entidade.codSusp,
 					entidade.vlrCPRBSusp,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
 			catch (Exception ex)
 			{

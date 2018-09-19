@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R2050XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             R2050 r2050 = new R2050();
             R2050infoProc r2050InfoProc = new R2050infoProc();
@@ -33,7 +33,7 @@ namespace REINF
                     {
                         case "evtComProd":
                             x.MoveToAttribute("id");
-                            r2050.Chave = x.Value.ToString();
+                            r2050.Id = x.Value.ToString();
                             break;
                         case "indRetif":
                             r2050.indRetif = x.ReadString();
@@ -118,12 +118,12 @@ namespace REINF
 
             }
 
-            daoR2050.Save(r2040, database, Id, r2050.Chave);
-            daoR2050InfoProc.Save(r2050InfoProc, database, Id, r2050.Chave);
-            daoR2050TipoCom.Save(r2050TipoCom, database, Id, r2050.Chave);
+			daoR2050.Save(r2050, database, Codigo, r2050.Id);
+			daoR2050InfoProc.Save(r2050InfoProc, database, Codigo, r2050.Id);
+			daoR2050TipoCom.Save(r2050TipoCom, database, Codigo, r2050.Id);
 
 
-            return true;
+			return true;
         }
     }
 }

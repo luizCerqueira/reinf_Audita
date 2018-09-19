@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R3010XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             
             R3010 r3010 = new R3010();
@@ -40,7 +40,7 @@ namespace REINF
                     {
 						case "evtEspDesportivo":
 							x.MoveToAttribute("id");
-							r3010.Chave = x.Value.ToString();
+							r3010.Id = x.Value.ToString();
 							break;
 						case "indRetif":
                             r3010.indRetif = x.ReadString();
@@ -178,13 +178,13 @@ namespace REINF
 
             }
 
-            daoR3010.Save(r3010, database, Id, r3010.Chave);
-            daoR3010Boletim.Save(r3010Boletim, database, Id, r3010.Chave);
-            daoR3010IdeEstab.Save(r3010IdeEstab, database, Id, r3010.Chave);
-            daoR3010InfoProc.Save(r3010InfoProc, database, Id, r3010.Chave);
-            daoR3010OutrasReceitas.Save(r3010OutrasReceitas, database, Id, r3010.Chave);
+			daoR3010.Save(r3010, database, Codigo, r3010.Id);
+			daoR3010Boletim.Save(r3010Boletim, database, Codigo, r3010.Id);
+			daoR3010IdeEstab.Save(r3010IdeEstab, database, Codigo, r3010.Id);
+			daoR3010InfoProc.Save(r3010InfoProc, database, Codigo, r3010.Id);
+			daoR3010OutrasReceitas.Save(r3010OutrasReceitas, database, Codigo, r3010.Id);
 
-            return true;
+			return true;
         }
     }
 }

@@ -15,12 +15,12 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R2099 entidade, string Banco, int Id, string Chave)
+		public bool Save(R2099 entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2099]([perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[nmResp],[cpfResp],[telefone],[email],[evtServTm],[evtServPr],[evtAssDespRec],[evtAssDespRep],[evtComProd],[evtCPRB],[evtPgtos],[compSemMovto],[R1000],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R2099]([perApur],[tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[nmResp],[cpfResp],[telefone],[email],[evtServTm],[evtServPr],[evtAssDespRec],[evtAssDespRep],[evtComProd],[evtCPRB],[evtPgtos],[compSemMovto],[R1000],[Id])";
 				strQuery += string.Format("VALUES ('{0: yyyy-MM-dd}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}',{18},'{19}')",
 					entidade.perApur,
 					entidade.tpAmb,
@@ -40,18 +40,19 @@ namespace DAO
 					entidade.evtCPRB,
 					entidade.evtPgtos,
 					entidade.compSemMovto,
-					Id,
-					entidade.Chave
+					Codigo,
+					entidade.Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
 			catch (Exception ex)
 			{

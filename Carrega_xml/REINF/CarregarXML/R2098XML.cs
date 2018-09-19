@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R2098XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             R2098 r2098 = new R2098();
 
@@ -29,7 +29,7 @@ namespace REINF
                     {
                         case "evtReabreEvPer":
                             x.MoveToAttribute("id");
-                            r2098.Chave = x.Value.ToString();
+                            r2098.Id = x.Value.ToString();
                             break;
                         case "perApur":
                             r2098.perApur = DateTime.Parse(x.ReadString());
@@ -54,9 +54,9 @@ namespace REINF
 
             }
 
-            daoR2098.Save(r2098, database, Id, r2098.Chave);
+			daoR2098.Save(r2098, database, Codigo, r2098.Id);
 
-            return true;
+			return true;
         }
     }
 }

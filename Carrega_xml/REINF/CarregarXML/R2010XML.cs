@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R2010XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             R2010 r2010 = new R2010();
             DaoR2010 daoR2010 = new DaoR2010();
@@ -36,7 +36,7 @@ namespace REINF
                     {
                         case "evtServTom":
                             x.MoveToAttribute("id");
-                            r2010.Chave = x.Value.ToString();
+                            r2010.Id = x.Value.ToString();
                             break;
                         case "indRetif":
                             r2010.indRetif = x.ReadString();
@@ -172,14 +172,14 @@ namespace REINF
                 }
 
             }
-            daoR2010.Save(r2010, database, Id, r2010.Chave);
-            daoR2010InfoProcRetAd.Save(r2010InfoProcRetAd, database, Id, r2010.Chave);
-            daoR2010InfoProcRetPr.Save(r2010InfoProcRetPr, database, Id, r2010.Chave);
-            daoR2010InfoTpServ.Save(r2010InfoTpServ, database, Id, r2010.Chave);
-            daoR2010Nfs.Save(r2010Nfs, database, Id, r2010.Chave);
+			daoR2010.Save(r2010, database, Codigo, r2010.Id);
+			daoR2010InfoProcRetAd.Save(r2010InfoProcRetAd, database, Codigo, r2010.Id);
+			daoR2010InfoProcRetPr.Save(r2010InfoProcRetPr, database, Codigo, r2010.Id);
+			daoR2010InfoTpServ.Save(r2010InfoTpServ, database, Codigo, r2010.Id);
+			daoR2010Nfs.Save(r2010Nfs, database, Codigo, r2010.Id);
 
 
-            return true;
+			return true;
         }
     }
 }

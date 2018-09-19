@@ -15,11 +15,11 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R2020ideTomador entidade, string Banco, int Id, string Chave)
+		public bool Save(R2020ideTomador entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
-				string strQuery = "INSERT INTO [dbo].[R2020ideTomador]([tpInscTomador],[nrInscTomador],[indObra],[vlrTotalBruto],[vlrTotalBaseRet],[vlrTotalRetPrinc],[vlrTotalRetAdic],[vlrTotalNRetPrinc],[vlrTotalNRetAdic],[R2020],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R2020ideTomador]([tpInscTomador],[nrInscTomador],[indObra],[vlrTotalBruto],[vlrTotalBaseRet],[vlrTotalRetPrinc],[vlrTotalRetAdic],[vlrTotalNRetPrinc],[vlrTotalNRetAdic],[R2020],[Id])";
 				strQuery += string.Format("VALUES ('{0}','{1}',{2},{3},{4},{5},{6},{7},{8},{9},'{10}')",
 					entidade.tpInscTomador,
 					entidade.nrInscTomador,
@@ -30,18 +30,19 @@ namespace DAO
 					entidade.vlrTotalRetAdic,
 					entidade.vlrTotalNRetPrinc,
 					entidade.vlrTotalNRetAdic,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
 			catch (Exception ex)
 			{

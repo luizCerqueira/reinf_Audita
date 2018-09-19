@@ -34,7 +34,7 @@ namespace REINF
                     {
                         case "evtInfoContri":
                             x.MoveToAttribute("id");
-                            r1000.Chave = x.Value.ToString();
+                            r1000.Id = x.Value.ToString();
                             break;
 						case "tpAmb":
 							r1000.tpAmb = x.ReadString();
@@ -230,12 +230,12 @@ namespace REINF
             }
 
 			//Criar Clausula para utiliza o comando save condicionalmente somente se houverem dados no objeto
-            bool verdade = daoR1000.Save(r1000, database, 0, r1000.Chave);
-			bool verdade2 = daoR1000inc.Save(r1000inc, database, 0, r1000.Chave);
-			bool verdade3 = daoR1000alt.Save(r1000alt, database, 0, r1000.Chave);
-			bool verdade4 = daoR1000exc.Save(r1000exc, database, 0, r1000.Chave);
+			bool verdade = daoR1000.Save(r1000, database, 0, r1000.Id);
+			bool verdade2 = daoR1000inc.Save(r1000inc, database, 0, r1000.Id);
+			bool verdade3 = daoR1000alt.Save(r1000alt, database, 0, r1000.Id);
+			bool verdade4 = daoR1000exc.Save(r1000exc, database, 0, r1000.Id);
 
-			return r1000.Id;
-        }
+			return r1000.Codigo;
+		}
     }
 }

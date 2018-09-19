@@ -15,12 +15,12 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R2030recursosRec entidade, string Banco, int Id, string Chave)
+		public bool Save(R2030recursosRec entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R2030recursosRec]([cnpjOrigRecurso],[vlrTotalRec],[vlrTotalRet],[vlrTotalNRet],[tpProc],[nrProc],[codSusp],[vlrNRet],[R2030],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R2030recursosRec]([cnpjOrigRecurso],[vlrTotalRec],[vlrTotalRet],[vlrTotalNRet],[tpProc],[nrProc],[codSusp],[vlrNRet],[R2030],[Id])";
 				strQuery += string.Format("VALUES ('{0}',{1},{2},{3},{4},'{5}','{6}',{7},{8},'{9}')",
 					entidade.cnpjOrigRecurso,
 					entidade.vlrTotalRec,
@@ -30,18 +30,19 @@ namespace DAO
 					entidade.nrProc,
 					entidade.codSusp,
 					entidade.vlrNRet,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
 			catch (Exception ex)
 			{

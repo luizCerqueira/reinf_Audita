@@ -14,11 +14,11 @@ namespace DAO
             throw new NotImplementedException();
         }
 
-        public bool Save(R2010infoTpServ entidade, string Banco, int Id, string Chave)
-        {
-            try
-            {
-				string strQuery = "INSERT INTO [dbo].[R2010infoTpServ]([tpServico],[vlrBaseRet],[vlrRetencao],[vlrRetSub],[vlrNRetPrinc],[vlrServicos15],[vlrServicos20],[vlrServicos25],[vlrAdicional],[vlrNRetAdic],[R2010nfs],[Chave])";
+		public bool Save(R2010infoTpServ entidade, string Banco, int Codigo, string Id)
+		{
+			try
+			{
+				string strQuery = "INSERT INTO [dbo].[R2010infoTpServ]([tpServico],[vlrBaseRet],[vlrRetencao],[vlrRetSub],[vlrNRetPrinc],[vlrServicos15],[vlrServicos20],[vlrServicos25],[vlrAdicional],[vlrNRetAdic],[R2010nfs],[Id])";
 				strQuery += string.Format("VALUES ('{0}',{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},'{11}')",
 					entidade.tpServico,
 					entidade.vlrBaseRet,
@@ -30,19 +30,21 @@ namespace DAO
 					entidade.vlrServicos25,
 					entidade.vlrAdicional,
 					entidade.vlrNRetAdic,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
-                {
-                    var Ide = _BD.InserirDado(strQuery);
-                    entidade.Id = Convert.ToInt32(Ide);
-                }
+				{
+					var Ide = _BD.InserirDado(strQuery);
+					entidade.Codigo = Convert.ToInt32(Ide);
+				}
 
-				return (entidade.Id != 0 ? true : false);
+
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
-            catch (Exception ex)
+			catch (Exception ex)
             {
                 return false;
             }

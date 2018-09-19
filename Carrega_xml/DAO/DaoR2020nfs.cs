@@ -15,29 +15,30 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R2020nfs entidade, string Banco, int Id, string Chave)
+		public bool Save(R2020nfs entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
-				string strQuery = "INSERT INTO [dbo].[R2020nfs]([serie],[numDocto],[dtEmissaoNF],[vlrBruto],[obs],[R2020ideTomador],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R2020nfs]([serie],[numDocto],[dtEmissaoNF],[vlrBruto],[obs],[R2020ideTomador],[Id])";
 				strQuery += string.Format("VALUES ('{0}','{1}','{2: yyyy-MM-dd}',{3},'{4}',{5},'{6}')",
 					entidade.serie,
 					entidade.numDocto,
 					entidade.dtEmissaoNF,
 					entidade.vlrBruto,
 					entidade.obs,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
 			catch (Exception ex)
 			{

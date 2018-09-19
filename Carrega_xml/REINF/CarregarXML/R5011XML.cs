@@ -11,7 +11,7 @@ namespace REINF
 {
 	public class R5011XML
 	{
-		public bool CarregarXML(string caminho, string database, int Id)
+		public bool CarregarXML(string caminho, string database, int Codigo)
 		{
 
 			R5011 r5011 = new R5011();
@@ -44,7 +44,7 @@ namespace REINF
 					{
 						case "evtTotalContrib":
 							x.MoveToAttribute("id");
-							r5011.Chave = x.Value.ToString();
+							r5011.Id = x.Value.ToString();
 							break;
 						case "perApur":
 							r5011.perApur = DateTime.Parse(x.ReadString());
@@ -181,13 +181,13 @@ namespace REINF
 
 			}
 
-			daoR5011.Save(r5011, database, Id, r5011.Chave);
-			
-			daoR5011RCPRB.Save(r5011Rcprb, database, Id, r5011.Chave);
-			
-			daoR5011RPrest.Save(r5011RPrest, database, Id, r5011.Chave);
-			daoR5011RRecRepAD.Save(r5011RRecRepAD, database, Id, r5011.Chave);
-			daoR5011RTom.Save(r5011RTom, database, Id, r5011.Chave);
+			daoR5011.Save(r5011, database, Codigo, r5011.Id);
+
+			daoR5011RCPRB.Save(r5011Rcprb, database, Codigo, r5011.Id);
+
+			daoR5011RPrest.Save(r5011RPrest, database, Codigo, r5011.Id);
+			daoR5011RRecRepAD.Save(r5011RRecRepAD, database, Codigo, r5011.Id);
+			daoR5011RTom.Save(r5011RTom, database, Codigo, r5011.Id);
 
 
 			return true;

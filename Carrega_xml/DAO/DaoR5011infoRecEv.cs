@@ -15,31 +15,31 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R5011infoRecEv entidade, string Banco, int Id, string Chave)
+		public bool Save(R5011infoRecEv entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
 
-				string strQuery = "INSERT INTO [dbo].[R5011infoRecEv]([nrProtEntr],[dhProcess],[tpEv],[idEv],[hash],[R5011],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R5011infoRecEv]([nrProtEntr],[dhProcess],[tpEv],[idEv],[hash],[R5011],[Id])";
 				strQuery += string.Format("VALUES ('{0}','{1: yyyy-MM-dd}','{2}','{3}','{4}',{5},'{6}')",
 					entidade.nrProtEntr,
 					entidade.dhProcess,
 					entidade.tpEv,
 					entidade.idEv,
 					entidade.hash,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
+				return (entidade.Codigo != 0 ? true : false);
 
-				return (entidade.Id != 0 ? true : false);
 			}
 			catch (Exception ex)
 			{

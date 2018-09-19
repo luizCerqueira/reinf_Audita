@@ -11,7 +11,7 @@ namespace REINF
 {
 	public class R5001XML
 	{
-		public bool CarregarXML(string caminho, string database, int Id)
+		public bool CarregarXML(string caminho, string database, int Codigo)
 		{
 
 			R5001 r5001 = new R5001();
@@ -42,7 +42,7 @@ namespace REINF
 					{
 						case "evtTotal":
 							x.MoveToAttribute("id");
-							r5001.Chave = x.Value.ToString();
+							r5001.Id = x.Value.ToString();
 							break;
 						case "perApur":
 							r5001.perApur = x.ReadString();
@@ -232,13 +232,13 @@ namespace REINF
 
 				}
 			}
-			daoR5001.Save(r5001, database, Id, r5001.Chave);
-			daoR5001IdeeEstab.Save(r5001IdeeEstab, database, Id, r5001.Chave);
-			daoR5001RCPRB.Save(r5001Rcprb, database, Id, r5001.Chave);
-			daoR5001RegOcorrs.Save(r5001RegOcorrs, database, Id, r5001.Chave);
-			daoR5001RPrest.Save(r5001RPrest, database, Id, r5001.Chave);
-			daoR5001RRecRepAD.Save(r5001RRecRepAD, database, Id, r5001.Chave);
-			daoR5001RTom.Save(r5001RTom, database, Id, r5001.Chave);
+			daoR5001.Save(r5001, database, Codigo, r5001.Id);
+			daoR5001IdeeEstab.Save(r5001IdeeEstab, database, Codigo, r5001.Id);
+			daoR5001RCPRB.Save(r5001Rcprb, database, Codigo, r5001.Id);
+			daoR5001RegOcorrs.Save(r5001RegOcorrs, database, Codigo, r5001.Id);
+			daoR5001RPrest.Save(r5001RPrest, database, Codigo, r5001.Id);
+			daoR5001RRecRepAD.Save(r5001RRecRepAD, database, Codigo, r5001.Id);
+			daoR5001RTom.Save(r5001RTom, database, Codigo, r5001.Id);
 
 
 			return true;

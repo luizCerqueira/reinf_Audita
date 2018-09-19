@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R2040XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             R2040 r2040 = new R2040();
             R2040infoRecurso r2040InfoRecurso = new R2040infoRecurso();
@@ -33,7 +33,7 @@ namespace REINF
                     {
                         case "evtAssocDespRep":
                             x.MoveToAttribute("id");
-                            r2040.Chave = x.Value.ToString();
+                            r2040.Id = x.Value.ToString();
                             break;
                         case "indRetif":
                             r2040.indRetif = x.ReadString();
@@ -108,12 +108,12 @@ namespace REINF
 
             }
 
-            daoR2040.Save(r2040, database, Id, r2040.Chave);
-            daoR2040InfoRecurso.Save(r2040InfoRecurso, database, Id, r2040.Chave);
-            daoR2040RecursosRep.Save(r2040RecursosRep, database, Id, r2040.Chave);
+			daoR2040.Save(r2040, database, Codigo, r2040.Id);
+			daoR2040InfoRecurso.Save(r2040InfoRecurso, database, Codigo, r2040.Id);
+			daoR2040RecursosRep.Save(r2040RecursosRep, database, Codigo, r2040.Id);
 
 
-            return true;
+			return true;
         }
     }
 }

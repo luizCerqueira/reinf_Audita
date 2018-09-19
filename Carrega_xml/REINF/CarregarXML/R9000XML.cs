@@ -11,7 +11,7 @@ namespace REINF
 {
 	public class R9000XML
 	{
-		public bool CarregarXML(string caminho, string database, int Id)
+		public bool CarregarXML(string caminho, string database, int Codigo)
 		{
 
 			R9000 r9000 = new R9000();
@@ -31,7 +31,7 @@ namespace REINF
 					{
 						case "evtExclusao":
 							x.MoveToAttribute("id");
-							r9000.Chave = x.Value.ToString();
+							r9000.Id = x.Value.ToString();
 							break;
 						case "tpAmb":
 							r9000.tpAmb = x.ReadString();
@@ -64,7 +64,7 @@ namespace REINF
 
 			}
 
-			daoR9000.Save(r9000, database, Id, r9000.Chave);
+			daoR9000.Save(r9000, database, Codigo, r9000.Id);
 
 			return true;
 		}

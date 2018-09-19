@@ -15,11 +15,11 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R1070alteracao entidade, string Banco, int Id, string Chave)
+		public bool Save(R1070alteracao entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
-				string strQuery = "INSERT INTO [dbo].[R1070alteracao]([tpProc],[nrProc],[iniValid],[fimValid],[indAutoria],[codSusp],[indSusp],[dtDecisao],[indDeposito],[ufVara],[codMunic],[idVara],[iniValidN],[fimValidN],[R1070],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R1070alteracao]([tpProc],[nrProc],[iniValid],[fimValid],[indAutoria],[codSusp],[indSusp],[dtDecisao],[indDeposito],[ufVara],[codMunic],[idVara],[iniValidN],[fimValidN],[R1070],[Id])";
 				strQuery += string.Format("VALUES ('{0}','{1}','{2: yyyy-MM-dd}','{3: yyyy-MM-dd}','{4}','{5}','{6}','{7: yyyy-MM-dd}','{8}','{9}','{10}','{11}','{12: yyyy-MM-dd}','{13: yyyy-MM-dd}',{14},'{15}')",
 					entidade.tpProc,
 					entidade.nrProc,
@@ -35,8 +35,8 @@ namespace DAO
 					entidade.idVara,
 					entidade.iniValidN,
 					entidade.fimValidN,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 
@@ -44,12 +44,12 @@ namespace DAO
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
+				return (entidade.Codigo != 0 ? true : false);
 
-				return (entidade.Id != 0 ? true : false);
 			}
 			catch (Exception ex)
 			{

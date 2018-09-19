@@ -11,7 +11,7 @@ namespace REINF
 {
 	public class R2020XML
 	{
-		public bool CarregarXML(string caminho, string database, int Id)
+		public bool CarregarXML(string caminho, string database, int Codigo)
 		{
 			R2020 r2020 = new R2020();
 			R2020ideTomador r2020IdeTomador = new R2020ideTomador();
@@ -42,7 +42,7 @@ namespace REINF
 						//R2020
 						case "evtServPrest":
 							x.MoveToAttribute("id");
-							r2020.Chave = x.Value.ToString();
+							r2020.Id = x.Value.ToString();
 							break;
 						case "indRetif":
 							r2020.indRetif = x.ReadString();
@@ -180,12 +180,12 @@ namespace REINF
 				}
 
 			}
-			daoR2020.Save(r2020, database, Id, r2020.Chave);
-			daoR2020IdeTomador.Save(r2020IdeTomador, database, Id, r2020.Chave);
-			daoR2020Nfs.Save(r2020Nfs, database, Id, r2020.Chave);
-			daoR2020InfoTpServ.Save(r2020InfoTpServ, database, Id, r2020.Chave);
-			daoR2020InfoProcRetPr.Save(r2020InfoProcRetPr, database, Id, r2020.Chave);
-			daoR2020InfoProcRetAd.Save(r2020InfoProcRetAd, database, Id, r2020.Chave);
+			daoR2020.Save(r2020, database, Codigo, r2020.Id);
+			daoR2020IdeTomador.Save(r2020IdeTomador, database, Codigo, r2020.Id);
+			daoR2020Nfs.Save(r2020Nfs, database, Codigo, r2020.Id);
+			daoR2020InfoTpServ.Save(r2020InfoTpServ, database, Codigo, r2020.Id);
+			daoR2020InfoProcRetPr.Save(r2020InfoProcRetPr, database, Codigo, r2020.Id);
+			daoR2020InfoProcRetAd.Save(r2020InfoProcRetAd, database, Codigo, r2020.Id);
 
 
 

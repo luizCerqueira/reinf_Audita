@@ -14,30 +14,31 @@ namespace DAO
             throw new NotImplementedException();
         }
 
-        public bool Save(R2010infoProcRetAd entidade, string Banco, int Id, string Chave)
-        {
-            try
-            {
-				string strQuery = "INSERT INTO [dbo].[R2010infoProcRetAd]([tpProcRetAdic],[nrProcRetAdic],[codSuspAdic],[valorAdic],[R1000],[Chave])";
+		public bool Save(R2010infoProcRetAd entidade, string Banco, int Codigo, string Id)
+		{
+			try
+			{
+				string strQuery = "INSERT INTO [dbo].[R2010infoProcRetAd]([tpProcRetAdic],[nrProcRetAdic],[codSuspAdic],[valorAdic],[R1000],[Id])";
 				strQuery += string.Format("VALUES ({0},'{1}','{2}',{3},{4},'{5}')",
 					entidade.tpProcRetAdic,
 					entidade.nrProcRetAdic,
 					entidade.codSuspAdic,
 					entidade.valorAdic,
-					Id,
-					Chave
+					Codigo,
+					Id
 				);
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
-                {
-                    var Ide = _BD.InserirDado(strQuery);
-                    entidade.Id = Convert.ToInt32(Ide);
-                }
+				{
+					var Ide = _BD.InserirDado(strQuery);
+					entidade.Codigo = Convert.ToInt32(Ide);
+				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
-            catch (Exception ex)
+			catch (Exception ex)
             {
                 return false;
             }

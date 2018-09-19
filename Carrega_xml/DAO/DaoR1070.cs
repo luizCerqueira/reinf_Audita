@@ -15,30 +15,31 @@ namespace DAO
 			throw new NotImplementedException();
 		}
 
-		public bool Save(R1070 entidade, string Banco, int Id, string Chave)
+		public bool Save(R1070 entidade, string Banco, int Codigo, string Id)
 		{
 			try
 			{
-				string strQuery = "INSERT INTO [dbo].[R1070]([tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[R1000],[Chave])";
+				string strQuery = "INSERT INTO [dbo].[R1070]([tpAmb],[procEmi],[verProc],[tpInsc],[nrInsc],[R1000],[Id])";
 				strQuery += string.Format("VALUES ('{0}','{1}','{2}','{3}','{4}',{5},'{6}')",
 					entidade.tpAmb,
 					entidade.procEmi,
 					entidade.verProc,
 					entidade.tpInsc,
 					entidade.nrInsc,
-					Id,
-					entidade.Chave
+					Codigo,
+					entidade.Id
 				);
 
 
 				using (ConexaoBD _BD = new ConexaoBD(Banco))
 				{
 					var Ide = _BD.InserirDado(strQuery);
-					entidade.Id = Convert.ToInt32(Ide);
+					entidade.Codigo = Convert.ToInt32(Ide);
 				}
 
 
-				return (entidade.Id != 0 ? true : false);
+				return (entidade.Codigo != 0 ? true : false);
+
 			}
 			catch (Exception ex)
 			{

@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R1070XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             R1070 r1070 = new R1070();
             DaoR1070 daoR1070 = new DaoR1070();
@@ -36,7 +36,7 @@ namespace REINF
                     {
                         case "evtTabProcesso":
                             x.MoveToAttribute("id");
-                            r1070.Chave = x.Value.ToString();
+                            r1070.Id = x.Value.ToString();
                             break;
                         case "tpAmb":
                             r1070.tpAmb = x.ReadString();
@@ -176,12 +176,12 @@ namespace REINF
    
             }
 
-            daoR1070.Save(r1070, database, Id, r1070.Chave);
-            daoR1070Inclusao.Save(r1070Inclusao, database, Id, r1070.Chave);
-            daoR1070Alteracao.Save(r1070Alteracao, database, Id, r1070.Chave);
-            daoR1070Exclusao.Save(r1070Exclusao, database, Id, r1070.Chave);
+			daoR1070.Save(r1070, database, Codigo, r1070.Id);
+			daoR1070Inclusao.Save(r1070Inclusao, database, Codigo, r1070.Id);
+			daoR1070Alteracao.Save(r1070Alteracao, database, Codigo, r1070.Id);
+			daoR1070Exclusao.Save(r1070Exclusao, database, Codigo, r1070.Id);
 
-            return true;
+			return true;
         }
     }
 }

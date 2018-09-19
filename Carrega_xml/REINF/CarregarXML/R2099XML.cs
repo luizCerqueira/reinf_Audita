@@ -11,7 +11,7 @@ namespace REINF
 {
     public class R2099XML
     {
-        public bool CarregarXML(string caminho, string database, int Id)
+        public bool CarregarXML(string caminho, string database, int Codigo)
         {
             R2099 r2099 = new R2099();
 
@@ -29,7 +29,7 @@ namespace REINF
                     {
                         case "evtFechaEvPer":
                             x.MoveToAttribute("id");
-                            r2099.Chave = x.Value.ToString();
+                            r2099.Id = x.Value.ToString();
                             break;
                         case "perApur":
                             r2099.perApur = DateTime.Parse(x.ReadString());
@@ -91,9 +91,9 @@ namespace REINF
 
             }
 
-            daoR2099.Save(r2099, database, Id, r2099.Chave);
+			daoR2099.Save(r2099, database, Codigo, r2099.Id);
 
-            return true;
+			return true;
         }
     }
 }
